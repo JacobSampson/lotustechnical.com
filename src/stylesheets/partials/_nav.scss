@@ -1,0 +1,43 @@
+nav {
+    list-style-type: none;
+    height: 5%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.nav-main {
+    border-top-color: green;
+    border-top-width: 5px;
+    border-top-style: solid;
+    list-style-type: none;
+    margin: 0;
+
+    li {
+        float: right;
+        transition: 0.2s;
+
+        a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background-color: green;
+            cursor: pointer;
+        }
+    }
+}
+
+#nav-facebook:hover .nav-drop-down {
+    display: block;
+}
+
+.nav-drop-down {
+    display: none;
+    position: absolute;
+}

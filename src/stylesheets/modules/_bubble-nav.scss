@@ -1,0 +1,37 @@
+@mixin bubble-nav($item-count, $item-spaces, $angle-start, $circle-size, $item-size) {
+	position: relative;
+	width:  $circle-size;
+	height: $circle-size;
+	padding: 0;
+	border-radius: 50% ;
+	list-style: none;
+
+  > * { 
+    display: block;
+    position: absolute;
+    top:  50% ;
+    left: 50%;
+    width:  $item-size;
+    height: $item-size;
+    margin: -($item-size / 2);
+  
+    $angle: (360 / $item-spaces);
+    $rot: -$angle-start;
+
+    @for $i from 1 through $item-count {
+		&:nth-of-type(#{$i}) {
+				border-radius: 50%;
+				background-color: rgb(20 + 20 * $i, 30, 80);
+				transform: rotate($rot * 1deg) translate($circle-size / 2) rotate(-90deg + $rot);
+				transition-duration: 0.25s;
+				transition-timing-function: cubic-bezier()
+		}
+      
+		&:nth-of-type(#{$i}):hover {
+				width: 2 * $item-size;
+				height: 2 * $item-size;
+		}
+		$rot: $rot + $angle;
+    }
+  }
+}
