@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,EAAE,CAAC;EACC,KAAK,EAAE,GAAG;CACb",
+    "sources": [
+        "stylesheets/style.scss",
+        "stylesheets/partials/_base.scss",
+        "stylesheets/modules/_all.scss",
+        "stylesheets/partials/_header.scss",
+        "stylesheets/partials/_footer.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
