@@ -35,26 +35,26 @@ nav {
   height: 100%;
   width: 20%;
   z-index: 10;
-  -webkit-box-shadow: 1em 0em 2em 0.1em rgba(0, 0, 0, 0.4);
-          box-shadow: 1em 0em 2em 0.1em rgba(0, 0, 0, 0.4);
+  background-color: #1fc8db;
+  background-image: linear-gradient(141deg, #9fb8ad 0%, #001e32 51%, #001e32 75%);
 }
 
 .nav-logo {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 1em;
+  padding: 5em;
+  -webkit-box-shadow: 1em 0em 2em 0.1em rgba(0, 0, 0, 0.4);
+          box-shadow: 1em 0em 2em 0.1em rgba(0, 0, 0, 0.4);
 }
 
 .nav-logo img {
-  width: 10vh;
-  height: 100%;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .nav-external-links {
   position: absolute;
-  top: 20%;
+  top: 40%;
+  right: -0%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,7 +63,6 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #0066ff;
 }
 
 .nav-external-links ul {
@@ -74,38 +73,55 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em;
+  margin-left: 0;
   padding: 0;
   width: 100%;
   list-style: none;
+  background-color: white;
 }
 
 .nav-external-link {
+  margin: 2em;
+  width: 5vh;
+  height: 5vh;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-external-link a {
   width: 100%;
-  height: 10vh;
+  margin: 0 auto;
 }
 
 .nav-external-link img {
+  display: relative;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 5vh;
+  width: 100%;
 }
 
-.nav-external-link:hover img {
+.nav-external-link:hover {
   width: 7vh;
 }
 
+.nav-external-link:hover img {
+  top: 0;
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
+}
+
 .color-filter {
-  -webkit-filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
-          filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+  -webkit-filter: invert(9%) sepia(48%) saturate(2564%) hue-rotate(177deg) brightness(94%) contrast(105%);
+          filter: invert(9%) sepia(48%) saturate(2564%) hue-rotate(177deg) brightness(94%) contrast(105%);
 }
 
 .nav-internal-links {
   position: absolute;
-  top: 50%;
+  bottom: 0%;
   width: 100%;
 }
 

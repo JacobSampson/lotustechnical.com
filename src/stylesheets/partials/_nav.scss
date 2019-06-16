@@ -8,64 +8,79 @@ nav {
     width: 20%;
     z-index: $idx-nav;
 
-    box-shadow: 1em 0em 2em 0.1em rgba(0,0, 0, 0.4);
+    background-color: #1fc8db;
+    background-image: linear-gradient(141deg, #9fb8ad 0%, rgb(0, 30, 50) 51%, rgb(0, 30, 50) 75%);
 }
 
 .nav-logo {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1em;
+    padding: 5em;
+    box-shadow: 1em 0em 2em 0.1em rgba(0,0, 0, 0.4);
 
     img {
-        width: 10vh;
-        height: 100%;
+        margin: 0 auto;
+        width: 100%;
     }
 }
 
 .nav-external-links {
     position: absolute;
-    top: 20%;
+    top: 40%;
+    right: -0%;
     width: 100%;
     display: flex;
     flex-direction: column;
 
-    background-color: rgb(0, 102, 255);
-
     ul {
         display: flex;
         flex-direction: row;
-        margin: 0;
+        justify-content: center;
+        margin: 1em;
+        margin-left: 0;
         padding: 0;
         width: 100%;
+
         list-style: none;
+        background-color: white;
     }
 }
 
 .nav-external-link {
-    width: 100%;
-    height: 10vh;
+    margin: 2em;
+    width: 5vh;
+    height: 5vh;
 
-    img {
-        transition: 0.5s;
-        align-self: center;
-        width: 5vh;
+    transition: 0.5s;
+
+    a {
+        width: 100%;
+        margin: 0 auto;
     }
 
-    &:hover img {
+    img {
+        display: relative;
+        transition: 0.5s;
+        width: 100%;
+    }
+
+    &:hover {
         width: 7vh;
+
+        img {
+            top: 0;
+            transform: translateY(-10%);
+        }
     }
 }
 
 .color-filter {
     // Used to find filter to adjust color from black: https://codepen.io/sosuke/pen/Pjoqqp
-    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%)
+    filter: invert(9%) sepia(48%) saturate(2564%) hue-rotate(177deg) brightness(94%) contrast(105%);
 }
 
 .nav-internal-links {
     position: absolute;
-    top: 50%;
+    bottom: 0%;
     width: 100%;
     
     ul {
