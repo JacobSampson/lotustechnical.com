@@ -1,10 +1,23 @@
 main {
     position: absolute;
-    display: flex;
     width: 80%;
-    height: 300vh;
+    height: 200vh;
 
-    background-color: red;
+    background-color: white;
+}
+
+.stock-photo {
+    display: relative;
+    width: auto;
+    height: 35%;
+    padding: 0;
+    margin: 0;
+
+    background-image: url("resources/photos/saint-paul-skyline.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 25%;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
 }
 
 .quote {
@@ -14,4 +27,21 @@ main {
     margin: auto 0;
 
     background-color: white;
+    font-style: italic;
+    letter-spacing: .2em;
+    font-size: 150%;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    float: center;
+    width: 100;
+
+}
+
+.stat {
+    float: center;
+    width: 25%;
+    text-align: center;
 }
