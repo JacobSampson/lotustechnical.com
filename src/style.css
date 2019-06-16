@@ -6,8 +6,9 @@ body {
 
 main {
   position: absolute;
-  width: 80%;
+  width: 70%;
   height: 200vh;
+  right: 0;
   background-color: white;
 }
 
@@ -65,7 +66,16 @@ nav {
   left: 0;
   top: 0;
   height: 100%;
-  width: 20%;
+  width: 30%;
+  z-index: 10;
+}
+
+.nav-main {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 50%;
   z-index: 10;
   background-color: #1fc8db;
   background-image: linear-gradient(141deg, #9fb8ad 0%, #001e32 51%, #001e32 75%);
@@ -75,7 +85,7 @@ nav {
 
 .nav-logo {
   position: absolute;
-  padding: 5em;
+  padding: 10%;
 }
 
 .nav-logo img {
@@ -87,11 +97,17 @@ nav {
   cursor: pointer;
 }
 
+.nav-side {
+  position: absolute;
+  width: 50%;
+  right: 0;
+  height: 100%;
+}
+
 .nav-external-links {
   position: absolute;
-  top: 40%;
-  right: -0%;
   width: 100%;
+  bottom: -2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,18 +128,19 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1em;
+  margin: 0.5em;
   margin-left: 0;
-  padding: 0;
+  padding: 3% 0;
   width: 100%;
   list-style: none;
   background-color: white;
 }
 
 .nav-external-link {
-  margin: 2em;
-  width: 5vh;
-  height: 5vh;
+  margin: 1em;
+  width: 4vh;
+  height: 4vh;
+  padding: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -145,8 +162,8 @@ nav {
 
 .nav-external-link:hover img {
   top: 0;
-  -webkit-transform: translateY(-10%);
-          transform: translateY(-10%);
+  -webkit-transform: translateY(-1.5vh);
+          transform: translateY(-1.5vh);
 }
 
 .color-filter {
@@ -156,9 +173,15 @@ nav {
 
 .nav-internal-links {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
   bottom: 0%;
   width: 100%;
+  height: 100%;
   text-align: center;
+  background-color: #9fb8ad;
 }
 
 .nav-internal-links ul {
@@ -176,11 +199,10 @@ nav {
 }
 
 .nav-internal-links ul li {
-  height: 4vh;
   width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
-  background-color: lightseagreen;
+  background-color: #9fb8ad;
   -webkit-transition: 0.25s;
   transition: 0.25s;
 }
@@ -195,8 +217,8 @@ nav {
 }
 
 .nav-internal-link:hover {
-  height: 10em;
-  background-color: lightgreen;
+  -webkit-filter: brightness(94%);
+          filter: brightness(94%);
   cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
