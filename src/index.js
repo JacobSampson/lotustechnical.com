@@ -1,3 +1,3 @@
-$(document).onload(function() {
-    $(main).load("pages/landing.html");
+$(document).ready(function() {
+    $("main").load("pages/landing.html");
 });
