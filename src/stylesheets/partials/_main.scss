@@ -4,7 +4,7 @@ main {
     height: 200vh;
     right: 0;
 
-    background-color: white;
+    background-color: rgb(77, 74, 74);
 }
 
 .stock-photo {
@@ -14,7 +14,8 @@ main {
     padding: 0;
     margin: 0;
 
-    background-image: url("resources/photos/saint-paul-skyline.jpg");
+    //background-image: url("resources/photos/saint-paul-skyline.jpg");
+    background-image: url("resources/photos/skyline-test-3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 25%;
@@ -22,27 +23,84 @@ main {
 }
 
 .quote {
+    //color: rgb(0, 30, 50);
+    color: white;
     width: 100%;
     height: 10vh;
     text-align: center;
-    margin: auto 0;
+    //margin: auto 0;
+    margin-top: 2em;
+    margin-bottom: .8em;
 
-    background-color: white;
+    //background-color: white;
+    background-color: rgb(77, 74, 74);
     font-style: italic;
     letter-spacing: .2em;
     font-size: 150%;
 }
 
 .stats {
+    opacity: .8;
     display: flex;
     flex-direction: row;
     float: center;
     width: 100;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
+    //border-radius: 1em;
+
+    //background-color: #9fb8ad;
+    background-color: #8DD8F8;
+    color: rgb(0, 30, 50);
 
 }
 
 .stat {
+    color: white;
     float: center;
     width: 25%;
+    text-align: center;
+}
+
+.information { //row
+    margin: 0 -5px;
+    display: flex;
+    flex-direction: row;
+}
+
+.info {
+    float: left;
+    width: 50%;
+    padding: 1em;
+}
+
+.card {
+    opacity: .8;
+    color: white;
+    //border-radius: 1em;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
+    //padding: 16px;
+    text-align: center;
+    background-color: #00A5E4;
+    
+}
+.industries {
+    opacity: .8;
+    display: flex;
+    flex-direction: row;
+    float: center;
+    width: 100;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
+    //border-radius: 1em;
+
+    
+    background-color: #0069B6;
+    //background-color:  rgb(77, 74, 74);
+    color:white;
+
+}
+
+.industry {
+    float: center;
+    width: 33%;
     text-align: center;
 }
