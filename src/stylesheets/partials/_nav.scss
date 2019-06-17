@@ -15,7 +15,8 @@ nav {
 
 .nav-logo {
     position: absolute;
-    padding: 10%;
+    padding: 20%;
+    top: -5%;
 
     img {
         margin: 0 auto;
@@ -31,7 +32,7 @@ nav {
     position: absolute;
     width: 100%;
     height: 20%;
-    bottom: 40%;
+    top: 30%;
     display: flex;
     flex-direction: column;
 
@@ -86,9 +87,9 @@ nav {
     position: absolute;
     display: flex;
     right: 0;
-    bottom: 0%;
+    bottom: 5%;
     width: 100%;
-    height: 40%;
+    height: 45%;
 
     text-align: center;
 
@@ -110,11 +111,10 @@ nav {
     margin-top: 0.4em;
     flex: 1;
 
-    background-color: #005391;
     transition: 0.25s;
     
     p {
-        font-size: 150%;
+        font-size: 130%;
         text-decoration: none;
         color: white;
         user-select: none;
