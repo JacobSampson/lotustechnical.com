@@ -1,10 +1,21 @@
+@import "base";
+
 main {
     position: absolute;
     width: 80%;
     height: 200vh;
     right: 0;
+    z-index: $idx-main;
 
     background-color: rgb(77, 74, 74);
+}
+
+.card {
+    padding: 2%;
+    margin: 0;
+
+    box-shadow: 0.5em 4.5em 0.5em 5em rgba(0, 0, 0, 0.4);
+    color: white;
 }
 
 .stock-photo {
@@ -12,95 +23,94 @@ main {
     width: auto;
     height: 35%;
     padding: 0;
-    margin: 0;
+    margin-top: 0;
 
     //background-image: url("resources/photos/saint-paul-skyline.jpg");
     background-image: url("resources/photos/skyline-test-3.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 25%;
-    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.8);
 }
 
 .quote {
-    //color: rgb(0, 30, 50);
+    display: absolute;
     color: white;
     width: 100%;
     height: 10vh;
+    top: 50%;
     text-align: center;
-    //margin: auto 0;
-    margin-top: 2em;
-    margin-bottom: .8em;
-
-    //background-color: white;
+    padding-top: 2%;
+    margin: 0;
+    
     background-color: rgb(77, 74, 74);
     font-style: italic;
     letter-spacing: .2em;
     font-size: 150%;
+    
+    p {
+        top: 50%;
+        vertical-align: middle;
+    }
+
 }
 
-.stats {
-    opacity: .8;
+#stats {
     display: flex;
     flex-direction: row;
-    float: center;
-    width: 100;
-    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
-    //border-radius: 1em;
 
-    //background-color: #9fb8ad;
     background-color: #8DD8F8;
-    color: rgb(0, 30, 50);
-
 }
 
 .stat {
-    color: white;
-    float: center;
-    width: 25%;
+    flex: 1;
     text-align: center;
 }
 
-.information { //row
-    margin: 0 -5px;
-    display: flex;
-    flex-direction: row;
-}
+#information {
+    padding-top: 5%;
+    padding-bottom: 4em;
 
-.info {
-    float: left;
-    width: 50%;
-    padding: 1em;
-}
-
-.card {
-    opacity: .8;
-    color: white;
-    //border-radius: 1em;
-    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
-    //padding: 16px;
-    text-align: center;
     background-color: #00A5E4;
+
+    h3 {
+        font-size: 200%;
+        text-align: center;
+        padding: 0;
+    }
     
+    p {
+        font-size: 150%;
+        text-align: center;
+        padding: 5%;
+        margin: 0;
+    }
+
+    &:nth-child(1) {
+        padding-bottom: 100%;
+    }
 }
-.industries {
-    opacity: .8;
+
+.info-title {
+    padding-bottom: 2%;
+}
+
+#industries {
     display: flex;
     flex-direction: row;
-    float: center;
-    width: 100;
-    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
-    //border-radius: 1em;
 
-    
     background-color: #0069B6;
-    //background-color:  rgb(77, 74, 74);
-    color:white;
 
+    ul {
+        display: table;
+
+        li {
+            flex: 1;
+        }
+    }
 }
 
 .industry {
-    float: center;
     width: 33%;
-    text-align: center;
+    float: center;
 }
