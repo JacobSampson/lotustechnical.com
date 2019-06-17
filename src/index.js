@@ -9,7 +9,6 @@ $(document).ready(function() {
     $("#link-job-seekers").click(() => setMain("pages/job-seekers.html"));
     $("#link-employment-forms").click(() => setMain("pages/employment-forms.html"));
     $("#link-openings").click(() => setMain("pages/openings.html"));
-    $("#link-resume").click(() => setMain("pages/resume.html"));
 });
 
 function setMain(page) {
