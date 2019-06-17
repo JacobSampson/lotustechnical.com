@@ -132,7 +132,7 @@ main {
 }
 
 .industry {
-  width: 33%;
+  width: 50%;
   float: center;
 }
 
@@ -265,7 +265,6 @@ nav {
 }
 
 .nav-internal-link {
-  width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
   margin: 0;
@@ -275,6 +274,7 @@ nav {
           flex: 1;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  background-color: #001e32;
 }
 
 .nav-internal-link p {
@@ -287,13 +287,18 @@ nav {
           user-select: none;
 }
 
+.nav-internal-link.active {
+  -webkit-filter: brightness(150%);
+          filter: brightness(150%);
+}
+
 .nav-internal-link:hover {
-  width: 105%;
+  width: 103%;
   -webkit-filter: brightness(70%);
           filter: brightness(70%);
   cursor: pointer;
-  -webkit-transform: translateX(-2.5%);
-          transform: translateX(-2.5%);
+  -webkit-transform: translateX(-1.5%);
+          transform: translateX(-1.5%);
 }
 
 @media only screen and (max-width: 1000px) {
