@@ -287,16 +287,10 @@ nav {
           user-select: none;
 }
 
-<<<<<<< HEAD
 .nav-internal-link a {
   width: 100%;
   text-decoration: none;
   color: white;
-=======
-.nav-internal-link.active {
-  -webkit-filter: brightness(150%);
-          filter: brightness(150%);
->>>>>>> 54665f4eefa4e2812840a03d2ba3b3d78915c90f
 }
 
 .nav-internal-link:hover {
