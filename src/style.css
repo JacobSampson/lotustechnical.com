@@ -45,15 +45,15 @@ main {
   display: absolute;
   color: white;
   width: 100%;
-  height: 10vh;
+  height: 17vh;
   top: 50%;
   text-align: center;
   padding-top: 2%;
   margin: 0;
-  background-color: #4d4a4a;
+  background-color: #4A9B39;
   font-style: italic;
   letter-spacing: .2em;
-  font-size: 150%;
+  font-size: 250%;
 }
 
 .quote p {
@@ -72,6 +72,10 @@ main {
   background-color: #8DD8F8;
 }
 
+#stats p {
+  font-size: 150%;
+}
+
 .stat {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -86,13 +90,13 @@ main {
 }
 
 #information h3 {
-  font-size: 200%;
+  font-size: 300%;
   text-align: center;
   padding: 0;
 }
 
 #information p {
-  font-size: 150%;
+  font-size: 200%;
   text-align: center;
   padding: 5%;
   margin: 0;
@@ -196,11 +200,10 @@ nav {
   padding: 1% 0;
   width: 100%;
   list-style: none;
-  background-color: #157C32;
 }
 
 .nav-external-link {
-  margin: 2%;
+  margin: 4%;
   width: 4vh;
   height: 4vh;
   padding: 0;
@@ -264,7 +267,8 @@ nav {
   width: 100%;
   -ms-flex-line-pack: center;
       align-content: center;
-  margin: 0.2em 0;
+  margin: 0;
+  margin-top: 0.4em;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -274,6 +278,7 @@ nav {
 }
 
 .nav-internal-link p {
+  font-size: 150%;
   text-decoration: none;
   color: white;
   -webkit-user-select: none;

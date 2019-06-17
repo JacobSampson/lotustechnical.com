@@ -37,16 +37,17 @@ main {
     display: absolute;
     color: white;
     width: 100%;
-    height: 10vh;
+    height: 17vh;
     top: 50%;
     text-align: center;
     padding-top: 2%;
     margin: 0;
     
-    background-color: rgb(77, 74, 74);
+    // background-color: rgb(77, 74, 74);
+    background-color: #4A9B39;
     font-style: italic;
     letter-spacing: .2em;
-    font-size: 150%;
+    font-size: 250%;
     
     p {
         top: 50%;
@@ -60,6 +61,10 @@ main {
     flex-direction: row;
 
     background-color: #8DD8F8;
+
+    p {
+        font-size: 150%;
+    }
 }
 
 .stat {
@@ -74,13 +79,13 @@ main {
     background-color: #00A5E4;
 
     h3 {
-        font-size: 200%;
+        font-size: 300%;
         text-align: center;
         padding: 0;
     }
     
     p {
-        font-size: 150%;
+        font-size: 200%;
         text-align: center;
         padding: 5%;
         margin: 0;

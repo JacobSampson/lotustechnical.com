@@ -45,12 +45,12 @@ nav {
         width: 100%;
 
         list-style: none;
-        background-color: #157C32;
+        // background-color: #157C32;
     }
 }
 
 .nav-external-link {
-    margin: 2%;
+    margin: 4%;
     width: 4vh;
     height: 4vh;
     padding: 0;
@@ -106,13 +106,15 @@ nav {
 .nav-internal-link {
     width: 100%;
     align-content: center;
-    margin: 0.2em 0;
+    margin: 0;
+    margin-top: 0.4em;
     flex: 1;
 
     background-color: #005391;
     transition: 0.25s;
     
     p {
+        font-size: 150%;
         text-decoration: none;
         color: white;
         user-select: none;
