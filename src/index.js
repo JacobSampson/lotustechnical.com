@@ -1,51 +1,41 @@
 $(document).ready(function() {
     // Set landing as the default home page
-    setMain("pages/job-seekers.html");
-    
-    // Main navigation links
-    $("#logo-technical").click(function() {
-        setMain("pages/landing.html");
-        removeActive();
-        $(this).addClass("active");
-    });
-    $("#link-landing").click(function() {
-        setMain("pages/landing.html");
-        removeActive();
-        $(this).addClass("active");
-    });
-    $("#link-clients").click(function() {
-        setMain("pages/clients.html");;
-        removeActive();
-        $(this).addClass("active");
-    });
-    $("#link-job-seekers").click(function() {
-        setMain("pages/job-seekers.html");
-        removeActive();
-        removeActive();
-        $(this).addClass("active");
-    });
-    $("#link-employment-forms").click(function() {
-        setMain("pages/employment-forms.html");
-        removeActive();
-        removeActive();
-        $(this).addClass("active");
-    });
-    $("#link-openings").click(function() {
-        setMain("pages/openings.html");
-        removeActive();
-        $(this).addClass("active");
-    });
+    $("main").load("pages/landing.html");
 
-    // Info bubbles
-    $(".info-bubble").click(function() {
-        $(this).addClass("minimized");
+    $("nav").load("pages/nav.html", function() {
+        // Main navigation links
+        $("#logo-technical").click(function() {
+            $("main").load("pages/landing.html");
+            $(this).addClass("active");
+        });
+        $("#link-landing").click(function() {
+            $("main").load("pages/landing.html");
+            $(this).addClass("active");
+        });
+        $("#link-clients").click(function() {
+            $("main").load("pages/clients.html");;
+            $(this).addClass("active");
+        });
+        $("#link-job-seekers").click(function() {
+            $("main").load("pages/job-seekers.html", function() {
+                // Info bubbles
+                $(".info-bubble").click(function() {
+                    if ($(this).hasClass("active")) {
+                        $(this).removeClass("active");
+                    } else {
+                        $(this).addClass("active");
+                    }
+                });
+            });
+            $(this).addClass("active");
+        });
+        $("#link-employment-forms").click(function() {
+            $("main").load("pages/employment-forms.html");
+            $(this).addClass("active");
+        });
+        $("#link-openings").click(function() {
+            $("main").load("pages/openings.html");
+            $(this).addClass("active");
+        });
     });
 });
-
-function setMain(page) {
-    $("main").load(page);
-}
-
-function removeActive() {
-    $(".inner-link").removeClass("active");
-}

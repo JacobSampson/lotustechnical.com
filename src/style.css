@@ -29,7 +29,7 @@ main {
 .stock-photo {
   display: relative;
   width: 100%;
-  height: 50%;
+  height: 40vw;
   padding: 0;
   margin-top: 0;
   background-image: url("resources/photos/skyline.jpg");
@@ -344,7 +344,7 @@ main {
 }
 
 h1 {
-  font-size: 200%;
+  font-size: 3em;
   text-align: center;
   margin: 2em;
   color: white;
@@ -365,7 +365,8 @@ h1 {
   position: relative;
   width: 100%;
   margin: 0.5%;
-  background-color: white;
+  background-color: #4A9B39;
+  color: white;
 }
 
 .employee p {
@@ -393,11 +394,12 @@ h1 {
 
 .info-bubble {
   position: absolute;
-  right: 2%;
-  bottom: 13%;
-  height: 10em;
-  width: 10em;
-  background-color: white;
+  right: 3%;
+  bottom: 16%;
+  height: 8em;
+  width: 8em;
+  background-image: linear-gradient(130deg, rgba(74, 156, 57, 0.7), #4a9c39);
+  color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -409,30 +411,69 @@ h1 {
           animation-name: bob;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
-  -webkit-animation-timing-function: cubic-bezier();
-          animation-timing-function: cubic-bezier();
+  -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .info-bubble p {
   position: absolute;
   right: 42%;
-  top: -20%;
+  top: -40%;
   font-style: oblique;
   font-size: 500%;
 }
 
 .info-bubble:hover {
-  -webkit-filter: brightness(80%);
-          filter: brightness(80%);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+  cursor: pointer;
 }
 
-.info-bubble.minimized {
-  height: 5em;
-  widht: 5em;
+.info-bubble.active {
+  height: 4em;
+  width: 4em;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.info-box {
+  display: none;
+  position: absolute;
+  width: 100%;
+  bottom: 10%;
+  height: 0%;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #4a9c39), color-stop(80%), color-stop(90%, rgba(74, 156, 57, 0)));
+  background-image: linear-gradient(0deg, #4a9c39 10%, 80%, rgba(74, 156, 57, 0) 90%);
+}
+
+.info-box .info-text {
+  display: relative;
+  padding-left: 4em;
+  width: 100%;
+  height: 30%;
+  -webkit-transform: translateY(200%);
+          transform: translateY(200%);
+  opacity: 0%;
+}
+
+.info-box .info-text p {
+  text-align: left;
+  line-height: 1.5em;
+  display: absolute;
+  font-size: 1.5em;
+}
+
+.info-box.active {
+  display: block;
+  height: 80%;
+}
+
+.info-box.active .info-text {
+  opacity: 100%;
 }
 
 @-webkit-keyframes bob {
@@ -451,5 +492,27 @@ h1 {
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
   }
+}
+
+.placement-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 5em;
+  padding-bottom: 20em;
+}
+
+.placement-options h2 {
+  font-size: 2.5em;
+  padding-bottom: 1.5em;
+}
+
+.placement-options a {
+  line-height: 2em;
+  font-size: 1.5em;
 }
 /*# sourceMappingURL=style.css.map */
