@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Set landing as the default home page
-    setMain("pages/landing.html");
+    setMain("pages/job-seekers.html");
     
     // Main navigation links
     $("#logo-technical").click(function() {
@@ -34,6 +34,11 @@ $(document).ready(function() {
         setMain("pages/openings.html");
         removeActive();
         $(this).addClass("active");
+    });
+
+    // Info bubbles
+    $(".info-bubble").click(function() {
+        $(this).addClass("minimized");
     });
 });
 

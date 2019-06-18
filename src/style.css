@@ -29,7 +29,7 @@ main {
 .stock-photo {
   display: relative;
   width: 100%;
-  height: 25%;
+  height: 50%;
   padding: 0;
   margin-top: 0;
   background-image: url("resources/photos/skyline.jpg");
@@ -204,8 +204,8 @@ nav {
 
 .nav-external-link {
   margin: 4%;
-  width: 4vh;
-  height: 4vh;
+  width: 10%;
+  height: 10%;
   padding: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -223,13 +223,13 @@ nav {
 }
 
 .nav-external-link:hover {
-  width: 7vh;
+  width: 15%;
 }
 
 .nav-external-link:hover img {
   top: 0;
-  -webkit-transform: translateY(-1.5vh);
-          transform: translateY(-1.5vh);
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
 }
 
 .color-filter {
@@ -330,13 +330,24 @@ nav {
             box-shadow: 0 0em 2em 1em rgba(0, 0, 0, 0.4);
   }
   .nav-logo div {
-    max-width: 30vh;
+    max-width: 15vw;
   }
   .nav-internal-links, .nav-external-links {
     top: 135%;
     width: 100%;
     height: 10%;
   }
+}
+
+main {
+  background-color: #001e32;
+}
+
+h1 {
+  font-size: 200%;
+  text-align: center;
+  margin: 2em;
+  color: white;
 }
 
 .employee-pictures {
@@ -347,10 +358,19 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin: 1%;
 }
 
 .employee {
+  position: relative;
   width: 100%;
+  margin: 0.5%;
+  background-color: white;
+}
+
+.employee p {
+  font-size: 200%;
+  text-align: center;
 }
 
 .employee img {
@@ -369,5 +389,67 @@ nav {
 
 .placement-options ul {
   list-style: none;
+}
+
+.info-bubble {
+  position: absolute;
+  right: 2%;
+  bottom: 13%;
+  height: 10em;
+  width: 10em;
+  background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 50%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-animation-name: bob;
+          animation-name: bob;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: cubic-bezier();
+          animation-timing-function: cubic-bezier();
+}
+
+.info-bubble p {
+  position: absolute;
+  right: 42%;
+  top: -20%;
+  font-style: oblique;
+  font-size: 500%;
+}
+
+.info-bubble:hover {
+  -webkit-filter: brightness(80%);
+          filter: brightness(80%);
+}
+
+.info-bubble.minimized {
+  height: 5em;
+  widht: 5em;
+}
+
+@-webkit-keyframes bob {
+  from {
+  }
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
+}
+
+@keyframes bob {
+  from {
+  }
+  to {
+    -webkit-transform: translateY(-20%);
+            transform: translateY(-20%);
+  }
 }
 /*# sourceMappingURL=style.css.map */
