@@ -52,8 +52,8 @@ nav {
 
 .nav-external-link {
     margin: 4%;
-    width: 4vh;
-    height: 4vh;
+    width: 10%;
+    height: 10%;
     padding: 0;
 
     transition: 0.5s;
@@ -69,11 +69,11 @@ nav {
     }
 
     &:hover {
-        width: 7vh;
+        width: 15%;
 
         img {
             top: 0;
-            transform: translateY(-1.5vh);
+            transform: translateY(-10%);
         }
     }
 }
@@ -125,7 +125,7 @@ nav {
         text-decoration: none;
         color: white;
     }
-    
+
     &.active {
         filter: brightness(150%);
     }
@@ -161,7 +161,7 @@ nav {
         box-shadow: 0 0em 2em 1em rgba(0,0, 0, 0.4);
 
         div {
-            max-width: 30vh;
+            max-width: 15vw;
         }
     }
 
