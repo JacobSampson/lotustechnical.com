@@ -1,0 +1,174 @@
+main {
+    background-color: rgb(0, 30, 50);
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin: 2em;
+
+    color: white;
+}
+
+.employee-pictures {
+    display: flex;
+    flex-direction: row;
+    margin: 1%;
+
+// @for $i from 1 to 3 {
+//     &:nth-child(#{i}) .info-bubble {
+//         animation-delay: $i * 0.4s;
+//     }
+// }
+    &:nth-child(2) .info-bubble {
+        animation-delay: 5s;
+    }
+}
+
+.employee {
+    position: relative;
+    width: 100%;
+    margin: 0.5%;
+    
+    background-color: #4A9B39;
+    color: white;
+
+    p {
+        font-size: 200%;
+
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+        //height: 100%;
+    }
+}
+
+.placement-options {
+    width: 100%;
+    height: 20em;
+    box-shadow: 0.5em 0.5em 1em rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    color: white;
+    background-color:#0069B6;
+
+    ul {
+        list-style: none;
+    }
+}
+
+.info-bubble {
+    position: absolute;
+    right: 35%;
+    height: 8em;
+    width: 8em;
+    top: 65%;
+    z-index: $idx-nav;
+    
+    // background-image: linear-gradient(130deg, rgba(74, 156, 57, 0.7), rgba(74, 156, 57, 1));
+    filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);;
+    color: white;
+    user-select: none;
+    border-radius: 50%;
+    transition: 0.5s;
+    animation-name: bob;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:hover {
+        filter: invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%);
+        cursor: pointer;
+    }
+
+    &.active {
+        height: 5em;
+        width: 5em;
+        top: -3%;
+        right: 42%;
+
+        animation: none;
+        transform: rotate(180deg);
+
+        p {
+            right: 42%;
+            top: 0%;
+            font-size: 150%;
+        }
+    }
+}
+
+.info-box {
+    display: none;
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    height: 0%;
+
+    background-image: linear-gradient(0deg, rgba(74, 156, 57, 1) 10%, 80%,  rgba(74, 156, 57, 0) 90%);
+    transition: height 0.5s linear;
+
+    .info-text {
+        display: relative;
+        padding-left: 4em;
+        width: 100%;
+        height: 30%;
+        transform: translateY(200%);
+
+        opacity: 0%;
+
+        p {
+            text-align: left;
+            line-height: 1.5em;
+            display: absolute;
+            font-size: 1.5em;
+        }
+    }
+}
+
+.info-box.active {
+    display: block;
+    height: 80%;
+
+    .info-text {
+        opacity: 100%;
+    }
+}
+
+@keyframes bob {
+    from {
+    }
+    to {
+        transform: translateY(-20%);
+    }
+}
+
+.placement-options {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5em;
+    padding-bottom: 20em;
+    
+    h2 {
+        font-size: 2.5em;
+        padding-bottom: 1.5em;
+    }
+
+    a {
+        line-height: 2em;
+        font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .employee-pictures {
+        flex-direction: column;
+
+        .employee {
+            margin: 2%;
+        }
+    }
+}
