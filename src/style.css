@@ -131,8 +131,10 @@ main {
 }
 
 .industry {
+  font-size: 150%;
   width: 50%;
   float: center;
+  margin-left: 15%;
 }
 
 body {
