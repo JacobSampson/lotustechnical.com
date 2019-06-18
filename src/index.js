@@ -3,6 +3,11 @@ $(document).ready(function() {
     $("main").load("pages/landing.html");
 
     $("nav").load("pages/nav.html", function() {
+        $("nav").on('click', 'li', function() {
+            $('.active').removeClass('active');
+            $(this).addClass('active');
+        });
+
         // Main navigation links
         $("#logo-technical").click(function() {
             $("main").load("pages/landing.html");
