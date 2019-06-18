@@ -13,7 +13,16 @@ h1 {
 .employee-pictures {
     display: flex;
     flex-direction: row;
-    margin: 1%;    
+    margin: 1%;
+
+// @for $i from 1 to 3 {
+//     &:nth-child(#{i}) .info-bubble {
+//         animation-delay: $i * 0.4s;
+//     }
+// }
+    &:nth-child(2) .info-bubble {
+        animation-delay: 5s;
+    }
 }
 
 .employee {
@@ -52,12 +61,14 @@ h1 {
 
 .info-bubble {
     position: absolute;
-    right: 3%;
-    bottom: 16%;
+    right: 35%;
     height: 8em;
     width: 8em;
+    top: 65%;
+    z-index: $idx-nav;
     
-    background-image: linear-gradient(130deg, rgba(74, 156, 57, 0.7), rgba(74, 156, 57, 1));
+    // background-image: linear-gradient(130deg, rgba(74, 156, 57, 0.7), rgba(74, 156, 57, 1));
+    filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);;
     color: white;
     user-select: none;
     border-radius: 50%;
@@ -67,25 +78,26 @@ h1 {
     animation-duration: 2s;
     animation-direction: alternate;
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    
-    p {
-        position: absolute;
-        right: 42%;
-        top: -40%;
-        font-style: oblique;
-        font-size: 500%;
-    }
 
     &:hover {
-        filter: brightness(120%);
+        filter: invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%);
         cursor: pointer;
     }
 
     &.active {
-        height: 4em;
-        width: 4em;
+        height: 5em;
+        width: 5em;
+        top: -3%;
+        right: 42%;
 
         animation: none;
+        transform: rotate(180deg);
+
+        p {
+            right: 42%;
+            top: 0%;
+            font-size: 150%;
+        }
     }
 }
 
@@ -97,6 +109,7 @@ h1 {
     height: 0%;
 
     background-image: linear-gradient(0deg, rgba(74, 156, 57, 1) 10%, 80%,  rgba(74, 156, 57, 0) 90%);
+    transition: height 0.5s linear;
 
     .info-text {
         display: relative;
@@ -147,5 +160,15 @@ h1 {
     a {
         line-height: 2em;
         font-size: 1.5em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .employee-pictures {
+        flex-direction: column;
+
+        .employee {
+            margin: 2%;
+        }
     }
 }

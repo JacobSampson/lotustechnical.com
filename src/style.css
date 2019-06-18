@@ -330,7 +330,7 @@ nav {
             box-shadow: 0 0em 2em 1em rgba(0, 0, 0, 0.4);
   }
   .nav-logo div {
-    max-width: 15vw;
+    max-width: 15e;
   }
   .nav-internal-links, .nav-external-links {
     top: 135%;
@@ -359,6 +359,11 @@ h1 {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 1%;
+}
+
+.employee-pictures:nth-child(2) .info-bubble {
+  -webkit-animation-delay: 5s;
+          animation-delay: 5s;
 }
 
 .employee {
@@ -394,11 +399,13 @@ h1 {
 
 .info-bubble {
   position: absolute;
-  right: 3%;
-  bottom: 16%;
+  right: 35%;
   height: 8em;
   width: 8em;
-  background-image: linear-gradient(130deg, rgba(74, 156, 57, 0.7), #4a9c39);
+  top: 65%;
+  z-index: 10;
+  -webkit-filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);
+          filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);
   color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -419,25 +426,27 @@ h1 {
           animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.info-bubble p {
-  position: absolute;
-  right: 42%;
-  top: -40%;
-  font-style: oblique;
-  font-size: 500%;
-}
-
 .info-bubble:hover {
-  -webkit-filter: brightness(120%);
-          filter: brightness(120%);
+  -webkit-filter: invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%);
+          filter: invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%);
   cursor: pointer;
 }
 
 .info-bubble.active {
-  height: 4em;
-  width: 4em;
+  height: 5em;
+  width: 5em;
+  top: -3%;
+  right: 42%;
   -webkit-animation: none;
           animation: none;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.info-bubble.active p {
+  right: 42%;
+  top: 0%;
+  font-size: 150%;
 }
 
 .info-box {
@@ -448,6 +457,8 @@ h1 {
   height: 0%;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(10%, #4a9c39), color-stop(80%), color-stop(90%, rgba(74, 156, 57, 0)));
   background-image: linear-gradient(0deg, #4a9c39 10%, 80%, rgba(74, 156, 57, 0) 90%);
+  -webkit-transition: height 0.5s linear;
+  transition: height 0.5s linear;
 }
 
 .info-box .info-text {
@@ -514,5 +525,17 @@ h1 {
 .placement-options a {
   line-height: 2em;
   font-size: 1.5em;
+}
+
+@media only screen and (max-width: 1000px) {
+  .employee-pictures {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .employee-pictures .employee {
+    margin: 2%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
