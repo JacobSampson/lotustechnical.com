@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // Set landing as the default home page
-    $("main").load("pages/landings.html");
+    $("main").load("pages/landing.html");
 
     // Setup nav button styles
     $("nav").load("pages/nav.html", function() {
