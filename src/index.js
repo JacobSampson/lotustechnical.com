@@ -1,7 +1,8 @@
 $(document).ready(function() {
     // Set landing as the default home page
-    $("main").load("pages/job-seekers.html");
+    $("main").load("pages/landings.html");
 
+    // Setup nav button styles
     $("nav").load("pages/nav.html", function() {
         // Add and remove active state
         $("nav").on("click", "li", function() {
