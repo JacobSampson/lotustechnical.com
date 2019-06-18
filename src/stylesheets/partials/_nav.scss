@@ -106,15 +106,21 @@ nav {
 
 .nav-internal-link {
     align-content: center;
+    display: table;
     margin: 0;
     margin-top: 0.4em;
     flex: 1;
+    padding: 5%;
 
     transition: 0.25s;
     background-color: rgb(0, 30, 50);
     
     p {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
         font-size: 130%;
+
         text-decoration: none;
         color: white;
         user-select: none;
