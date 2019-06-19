@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    console.log(document.location.hostname);
+
     // Set landing as the default home page
     $("main").load("pages/job-seekers.html");
 
@@ -18,7 +20,18 @@ $(document).ready(function() {
             $("main").load("pages/landing.html");
         });
         $("#link-clients").click(function() {
-            $("main").load("pages/clients.html");;
+            $("main").load("pages/clients.html", function() {
+                // Info bubbles
+                $(".info-bubble").click(function() {
+                    if ($(this).hasClass("active")) {
+                        $(this).removeClass("active");
+                        $(this).next().removeClass("active");
+                    } else {
+                        $(this).addClass("active");
+                        $(this).next().addClass("active");
+                    }
+                });
+            });
         });
         $("#link-job-seekers").click(function() {
             $("main").load("pages/job-seekers.html", function() {
