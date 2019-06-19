@@ -339,6 +339,15 @@ nav {
   }
 }
 
+.underlay-info {
+  display: fixed;
+  width: 20%;
+  height: 100%;
+  left: 20%;
+  z-index: 0;
+  background-color: white;
+}
+
 main {
   background-color: #001e32;
   overflow: hidden;
@@ -557,6 +566,16 @@ h1 {
     -webkit-transform: translateY(-20%);
             transform: translateY(-20%);
   }
+}
+
+.staff-linkedin {
+  position: relative;
+  left: 28%;
+  width: 15%;
+}
+
+.staff-linkedin img {
+  width: 100%;
 }
 
 .card {

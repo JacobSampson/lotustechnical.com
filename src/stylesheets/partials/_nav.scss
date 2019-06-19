@@ -179,3 +179,13 @@ nav {
         height: 10%;
     }
 }
+
+.underlay-info {
+    display: fixed;
+    width: 20%;
+    height: 100%;
+    left: 20%;
+    z-index: 0;
+
+    background-color: white;
+}

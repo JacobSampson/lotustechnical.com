@@ -47,9 +47,9 @@ $(document).ready(function() {
                 });
             });
         });
-        $("#link-employment-forms").click(function() {
-            $("main").load("pages/employment-forms.html");
-        });
+        // $("#link-employment-forms").click(function() {
+        //     $("main").load("pages/employment-forms.html");
+        // });
         $("#link-openings").click(function() {
             $("main").load("pages/openings.html");
         });
