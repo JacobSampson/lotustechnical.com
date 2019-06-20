@@ -42,10 +42,6 @@ body {
 
 .info-bubble {
   position: absolute;
-  width: 25%;
-  right: 50%;
-  top: 65%;
-  z-index: 10;
   -webkit-filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);
           filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);
   color: white;
@@ -66,17 +62,21 @@ body {
           animation-direction: alternate;
   -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
           animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.info-bubble .bubble-image {
-  position: relative;
-  right: -50%;
+  width: 25%;
+  right: 50%;
+  top: 65%;
+  z-index: 10;
 }
 
 .info-bubble:hover {
   -webkit-filter: invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%);
           filter: invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%);
   cursor: pointer;
+}
+
+.info-bubble .bubble-image {
+  position: relative;
+  right: -50%;
 }
 
 .info-bubble.active {

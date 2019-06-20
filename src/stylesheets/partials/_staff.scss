@@ -25,32 +25,15 @@
 }
 
 .info-bubble {
-    position: absolute;
+    @include hover-bubble(invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%), invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%));
     width: 25%;
     right: 50%;
     top: 65%;
     z-index: $idx-nav;
     
-    // background-image: linear-gradient(130deg, rgba(74, 156, 57, 0.7), rgba(74, 156, 57, 1));
-    filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);;
-    color: white;
-    user-select: none;
-    border-radius: 50%;
-    transition: 0.5s;
-    animation-name: bob;
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-
     .bubble-image {
         position: relative;
         right: -50%;
-    }
-
-    &:hover {
-        filter: invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%);
-        cursor: pointer;
     }
 
     &.active {
