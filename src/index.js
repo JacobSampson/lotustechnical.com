@@ -2,7 +2,7 @@ $(document).ready(function() {
     // console.log(document.location.hostname);
 
     // Set landing as the default home page
-    $("main").load("pages/job-seekers.html");
+    $("main").load("pages/landing.html");
 
     // Setup nav button styles
     $("nav").load("pages/nav.html", function() {
