@@ -94,7 +94,6 @@
             line-height: 1.5em;
             display: absolute;
             font-size: 1.5em;
-
         }
     }
 }
@@ -114,9 +113,16 @@
 
 .staff-linkedin {
     position: absolute;
-    left: 35%;
-    top: -55%;
+    right: 50%;
+    bottom: 40%;
     width: 15%;
+
+    transition: 0.5s;
+    
+    .linkedin-img {
+        position: relative;
+        right: -50%;
+    }
 
     img {
         width: 100%;

@@ -6,9 +6,15 @@ $(document).ready(function() {
 
     // Setup nav button styles
     $("nav").load("pages/nav.html", function() {
+        // $(document).click(function(e) {
+        //     if (!e.hasClass("side-bar-button")) {
+        //         $("#side-bar").removeClass("active");
+        //     }
+        // });
+
         // Add and remove active state
         $("nav").on("click", "li", function() {
-            $(".active").removeClass("active");
+            $("li.active").removeClass("active");
             $(this).addClass("active");
         });
 
@@ -38,18 +44,27 @@ $(document).ready(function() {
 
         // Sidebar popout
         $("#link-employment-forms").click(function() {
-            $("#side-bar").load("pages/pieces.side-employment-forms.html");
-            $("#side-bar").addClass("active");
+            $("#side-bar").load("pages/pieces/side-employment-forms.html");
+            toggleActive($("#side-bar"));
         });
         $("#link-resume").click(function() {
-
+            $("#side-bar").load("pages/pieces/side-phone.html");
+            toggleActive($("#side-bar"));
         });
-        $("#nav-external-link").click(function() {
-            loadSideBar("pages/pieces.side-phone.html");
-            toggleActive()
+        $(".nav-external-link").click(function() {
+            $("#side-bar").load("pages/pieces/side-phone.html");
+            toggleActive($("#side-bar"));
         });
     });
 });
+
+function toggleActive(element) {
+    if (element.hasClass("active")) {
+        element.removeClass("active");
+    } else {
+        element.addClass("active");
+    }
+}
 
 function toggleActivePopup(element) {
     if (element.hasClass("active")) {

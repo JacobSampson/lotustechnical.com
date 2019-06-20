@@ -1,5 +1,5 @@
 body {
-  margin: 0 0 0 20%;
+  margin: 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
 }
@@ -150,9 +150,16 @@ body {
 
 .staff-linkedin {
   position: absolute;
-  left: 35%;
-  top: -55%;
+  right: 50%;
+  bottom: 40%;
   width: 15%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.staff-linkedin .linkedin-img {
+  position: relative;
+  right: -50%;
 }
 
 .staff-linkedin img {
@@ -160,7 +167,7 @@ body {
 }
 
 body {
-  margin: 0 0 0 20%;
+  margin: 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
 }
@@ -285,7 +292,7 @@ main {
 }
 
 body {
-  margin: 0 0 0 20%;
+  margin: 0;
   padding: 0;
   font-family: "Times New Roman", Times, serif;
 }
@@ -297,7 +304,15 @@ nav {
   height: 100%;
   width: 20%;
   z-index: 10;
-  background-color: #1fc8db;
+}
+
+.nav-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 20%;
+  z-index: 10;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #9fb8ad), color-stop(51%, #001e32), color-stop(75%, #001e32));
   background-image: linear-gradient(180deg, #9fb8ad 15%, #001e32 51%, #001e32 75%);
   -webkit-box-shadow: -4em 1em 2em 5em rgba(0, 0, 0, 0.4);
@@ -461,19 +476,26 @@ nav {
           transform: translateX(-1.5%);
 }
 
-.side-bar {
+#side-bar {
+  margin: 0;
+  padding: 10% 0;
   display: relative;
   width: 0%;
   height: 100%;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
-  z-index: -1;
-  background-color: white;
+  z-index: 9;
+  color: white;
+  background-color: #4A9B39;
+  -webkit-box-shadow: -4em 1em 2em 5em rgba(0, 0, 0, 0.4);
+          box-shadow: -4em 1em 2em 5em rgba(0, 0, 0, 0.4);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+          transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-.side-bar.active {
+#side-bar.active {
   width: 100%;
 }
 
