@@ -147,45 +147,17 @@ nav {
     transform: translateX(-1.5%);
 }
 
-@media only screen and (max-width: 1000px) {
-    main {
-        top: 100%;
-        width: 100%;
-    }
-
-    nav {
-        position: absolute;
-        height: 30%;
-        width: 100%;
-    }
-
-    .nav-logo {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        height: 100%;
-
-        box-shadow: 0 0em 2em 1em rgba(0,0, 0, 0.4);
-
-        div {
-            max-width: 15e;
-        }
-    }
-
-    .nav-internal-links, .nav-external-links {
-        top: 135%;
-        width: 100%;
-        height: 10%;
-    }
-}
-
-.underlay-info {
-    display: fixed;
-    width: 20%;
+.side-bar {
+    display: relative;
+    width: 0%;
     height: 100%;
-    left: 20%;
-    z-index: 0;
+    transform: translateX(100%);
+    z-index: -1;
 
     background-color: white;
+    transition: 0.5s;
+
+    &.active {
+        width: 100%;
+    }
 }

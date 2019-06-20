@@ -1,0 +1,40 @@
+@media only screen and (max-width: 1000px) {
+    main {
+        top: 100%;
+        width: 100%;
+    }
+
+    nav {
+        position: absolute;
+        height: 30%;
+        width: 100%;
+    }
+
+    .nav-logo {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        box-shadow: 0 0em 2em 1em rgba(0,0, 0, 0.4);
+
+        div {
+            max-width: 15e;
+        }
+    }
+
+    .nav-internal-links, .nav-external-links {
+        top: 135%;
+        width: 100%;
+        height: 10%;
+    }
+
+    .employee-pictures {
+        flex-direction: column;
+
+        .employee {
+            margin: 2%;
+        }
+    }
+}

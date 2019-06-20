@@ -2,7 +2,7 @@ $(document).ready(function() {
     // console.log(document.location.hostname);
 
     // Set landing as the default home page
-    $("main").load("pages/landing.html");
+    $("main").load("pages/job-seekers.html");
 
     // Setup nav button styles
     $("nav").load("pages/nav.html", function() {
@@ -23,13 +23,7 @@ $(document).ready(function() {
             $("main").load("pages/clients.html", function() {
                 // Info bubbles
                 $(".info-bubble").click(function() {
-                    if ($(this).hasClass("active")) {
-                        $(this).removeClass("active");
-                        $(this).next().removeClass("active");
-                    } else {
-                        $(this).addClass("active");
-                        $(this).next().addClass("active");
-                    }
+                    toggleActivePopup($(this));
                 });
             });
         });
@@ -37,21 +31,32 @@ $(document).ready(function() {
             $("main").load("pages/job-seekers.html", function() {
                 // Info bubbles
                 $(".info-bubble").click(function() {
-                    if ($(this).hasClass("active")) {
-                        $(this).removeClass("active");
-                        $(this).next().removeClass("active");
-                    } else {
-                        $(this).addClass("active");
-                        $(this).next().addClass("active");
-                    }
+                    toggleActivePopup($(this));
                 });
             });
         });
-        // $("#link-employment-forms").click(function() {
-        //     $("main").load("pages/employment-forms.html");
-        // });
-        $("#link-openings").click(function() {
-            $("main").load("pages/openings.html");
+
+        // Sidebar popout
+        $("#link-employment-forms").click(function() {
+            $("#side-bar").load("pages/pieces.side-employment-forms.html");
+            $("#side-bar").addClass("active");
+        });
+        $("#link-resume").click(function() {
+
+        });
+        $("#nav-external-link").click(function() {
+            loadSideBar("pages/pieces.side-phone.html");
+            toggleActive()
         });
     });
 });
+
+function toggleActivePopup(element) {
+    if (element.hasClass("active")) {
+        element.removeClass("active");
+        element.next().removeClass("active");
+    } else {
+        element.addClass("active");
+        element.next().addClass("active");
+    }
+}

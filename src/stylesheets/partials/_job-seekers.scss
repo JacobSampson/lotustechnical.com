@@ -12,9 +12,9 @@ h1 {
 }
 
 #placement-options {
+    display: relative;
     width: 100%;
     margin-top: 5%;
-    height: 20em;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -28,6 +28,7 @@ h1 {
     }
 
     h2 {
+        text-align: center;
         font-size: 2.5em;
         // padding-bottom: 1.5em;
     }
@@ -35,16 +36,6 @@ h1 {
     p {
         line-height: 2em;
         font-size: 1.5em;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .employee-pictures {
-        flex-direction: column;
-
-        .employee {
-            margin: 2%;
-        }
     }
 }
 
