@@ -48,11 +48,11 @@ $(document).ready(function() {
             toggleActive($("#side-bar"));
         });
         $("#link-resume").click(function() {
-            $("#side-bar").load("pages/pieces/side-phone.html");
+            $("#side-bar").load("pages/pieces/side-resume.html");
             toggleActive($("#side-bar"));
         });
         $(".nav-external-link").click(function() {
-            $("#side-bar").load("pages/pieces/side-phone.html");
+            $("#side-bar").load("pages/pieces/side-info.html");
             toggleActive($("#side-bar"));
         });
     });
