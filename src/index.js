@@ -42,19 +42,19 @@ $(document).ready(function() {
             });
         });
 
-        // Sidebar popout
-        $("#link-employment-forms").click(function() {
-            $("#side-bar").load("pages/pieces/side-employment-forms.html");
-            toggleActive($("#side-bar"));
-        });
-        $("#link-resume").click(function() {
-            $("#side-bar").load("pages/pieces/side-resume.html");
-            toggleActive($("#side-bar"));
-        });
-        $(".nav-external-link").click(function() {
-            $("#side-bar").load("pages/pieces/side-info.html");
-            toggleActive($("#side-bar"));
-        });
+        // // Sidebar popout
+        // $("#link-employment-forms").click(function() {
+        //     $("#side-bar").load("pages/pieces/side-employment-forms.html");
+        //     toggleActive($("#side-bar"));
+        // });
+        // $("#link-resume").click(function() {
+        //     $("#side-bar").load("pages/pieces/side-resume.html");
+        //     toggleActive($("#side-bar"));
+        // });
+        // $(".nav-external-link").click(function() {
+        //     $("#side-bar").load("pages/pieces/side-info.html");
+        //     toggleActive($("#side-bar"));
+        // });
     });
 });
 
