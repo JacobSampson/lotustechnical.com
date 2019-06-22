@@ -7,22 +7,19 @@ $(document).ready(function() {
     
     // Setup nav
     $("nav").load("pages/nav.html", function() {
-
-        $("html").click(function(e) {
-            if ($(e).hasClass("nav-internal-link")) {
-                $("#side-bar").removeClass("active");
-            }
-        });
-
         // Add or remove active state
         $("nav").on("click", "li", function() {
-            $("li.active").removeClass("active");
-            $(this).addClass("active");
+            if($(this).hasClass("page")) {
+                $("li.active").removeClass("active");
+                $(this).addClass("active");
+            }
         });
 
         // Main navigation links
         $("#logo-technical").click(function() {
             $("main").load("pages/landing.html");
+            $("#link-clients, #link-job-seekers").removeClass("active");
+            $("#link-landing").addClass("active");
         });
         $("#link-landing").click(function() {
             $("main").load("pages/landing.html");
@@ -49,20 +46,9 @@ $(document).ready(function() {
             $("#side-bar").load("pages/pieces/side-employment-forms.html");
             toggleActive($("#side-bar"), $(this));
         });
-        $("#link-resume").click(function() {
-            $("#side-bar").load("pages/pieces/side-resume.html");
-            toggleActive($("#side-bar"), $(this));
-        });
-        $("#link-phone").click(function() {
+        $("#link-info").click(function() {
             $("#side-bar").load("pages/pieces/side-info.html");
             toggleActive($("#side-bar"), $(this));
-        });
-        $("#link-email").click(function() {
-            $("#side-bar").load("pages/pieces/side-info.html");
-        });
-        $("#link-location").click(function() {
-            toggleActive($("#side-bar"), $(this));
-            $("#side-bar").load("pages/pieces/side-info.html");
         });
     });
 });
@@ -70,7 +56,7 @@ $(document).ready(function() {
 function toggleActive(e, newSelection) {    
     oldSelection = newSelection[0].id;
 
-    if (newSelection != oldSelection) {
+    if (true) {
         if (e.hasClass("active")) {
                 e.removeClass("active");
         } else {
