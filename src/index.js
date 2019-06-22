@@ -1,18 +1,20 @@
+var oldSelection = null;
 $(document).ready(function() {
     // console.log(document.location.hostname);
 
     // Set landing as the default home page
     $("main").load("pages/landing.html");
-
-    // Setup nav button styles
+    
+    // Setup nav
     $("nav").load("pages/nav.html", function() {
-        // $(document).click(function(e) {
-        //     if (!e.hasClass("side-bar-button")) {
-        //         $("#side-bar").removeClass("active");
-        //     }
-        // });
 
-        // Add and remove active state
+        $("html").click(function(e) {
+            if ($(e).hasClass("nav-internal-link")) {
+                $("#side-bar").removeClass("active");
+            }
+        });
+
+        // Add or remove active state
         $("nav").on("click", "li", function() {
             $("li.active").removeClass("active");
             $(this).addClass("active");
@@ -42,36 +44,47 @@ $(document).ready(function() {
             });
         });
 
-        // // Sidebar popout
-        // $("#link-employment-forms").click(function() {
-        //     $("#side-bar").load("pages/pieces/side-employment-forms.html");
-        //     toggleActive($("#side-bar"));
-        // });
-        // $("#link-resume").click(function() {
-        //     $("#side-bar").load("pages/pieces/side-resume.html");
-        //     toggleActive($("#side-bar"));
-        // });
-        // $(".nav-external-link").click(function() {
-        //     $("#side-bar").load("pages/pieces/side-info.html");
-        //     toggleActive($("#side-bar"));
-        // });
+        // Sidebar popout
+        $("#link-employment-forms").click(function() {
+            $("#side-bar").load("pages/pieces/side-employment-forms.html");
+            toggleActive($("#side-bar"), $(this));
+        });
+        $("#link-resume").click(function() {
+            $("#side-bar").load("pages/pieces/side-resume.html");
+            toggleActive($("#side-bar"), $(this));
+        });
+        $("#link-phone").click(function() {
+            $("#side-bar").load("pages/pieces/side-info.html");
+            toggleActive($("#side-bar"), $(this));
+        });
+        $("#link-email").click(function() {
+            $("#side-bar").load("pages/pieces/side-info.html");
+        });
+        $("#link-location").click(function() {
+            toggleActive($("#side-bar"), $(this));
+            $("#side-bar").load("pages/pieces/side-info.html");
+        });
     });
 });
 
-function toggleActive(element) {
-    if (element.hasClass("active")) {
-        element.removeClass("active");
-    } else {
-        element.addClass("active");
+function toggleActive(e, newSelection) {    
+    oldSelection = newSelection[0].id;
+
+    if (newSelection != oldSelection) {
+        if (e.hasClass("active")) {
+                e.removeClass("active");
+        } else {
+            e.addClass("active");
+        }
     }
 }
 
-function toggleActivePopup(element) {
-    if (element.hasClass("active")) {
-        element.removeClass("active");
-        element.next().removeClass("active");
+function toggleActivePopup(e) {
+    if (e.hasClass("active")) {
+        e.removeClass("active");
+        e.next().removeClass("active");
     } else {
-        element.addClass("active");
-        element.next().addClass("active");
+        e.addClass("active");
+        e.next().addClass("active");
     }
 }
