@@ -5,10 +5,12 @@ $(document).ready(function() {
     let host = document.location.hostname;
     var pageFolder = "pages/";
 
-    if (host == "lotushealthcaresolutions") {
+    if (host === "lotushealthcaresolutions") {
         pageFolder += "health/";
+        $("#stock-photo").attr("src", "resources/photos/skyline.jpg");
     } else {
         pageFolder += "technical/";
+        $("#stock-photo").attr("src", "resources/photos/skyline.jpg");
     }
 
     // Set landing as the default home page
@@ -16,6 +18,13 @@ $(document).ready(function() {
     
     // Setup nav
     $("nav").load(pageFolder + "/nav.html", function() {
+
+        // Load logo
+        if (host === "lotushealthcarsolutions") {
+            $("#nav-logo").attr("background-image", "src(resources/logo-technical.png)");
+        } else {
+            $("#nav-logo").attr("background-image", "src(resources/logo-technical.png)");
+        }
 
         // Sidebar popout
         $("html").click(function (e) {
