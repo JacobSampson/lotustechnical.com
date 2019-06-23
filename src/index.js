@@ -7,11 +7,7 @@ $(document).ready(function() {
 
     console.log(host);
 
-<<<<<<< HEAD
-    if (host !== "lotushealthcaresolutions") {
-=======
     if (host !== "lotushealthcaresolutions.com") {
->>>>>>> dev
         pageFolder += "health/";
     } else {
         pageFolder += "technical/";
