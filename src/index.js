@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     console.log(host);
 
-    if (host === "lotushealthcaresolutions") {
+    if (host === "lotushealthcaresolutions.com") {
         pageFolder += "health/";
         $("#stock-photo").attr("src", "resources/photos/skyline.jpg");
     } else {
