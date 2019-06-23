@@ -83,7 +83,7 @@ function toggleSideBar(e, newSelection) {
     oldSelection = newSelection;
 }
 
-function toggleActive(e, newSelection) {
+function toggleActive(e) {
     if (e.hasClass("active")) {
         e.removeClass("active");
     } else {
