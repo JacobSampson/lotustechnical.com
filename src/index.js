@@ -7,7 +7,11 @@ $(document).ready(function() {
 
     console.log(host);
 
+<<<<<<< HEAD
     if (host !== "lotushealthcaresolutions") {
+=======
+    if (host !== "lotushealthcaresolutions.com") {
+>>>>>>> dev
         pageFolder += "health/";
     } else {
         pageFolder += "technical/";
@@ -45,7 +49,7 @@ $(document).ready(function() {
         });
 
         // Main navigation links
-        $("#logo-technical").click(function() {
+        $("#logo").click(function() {
             $("main").load(pageFolder + "/landing.html");
             $("#link-clients, #link-job-seekers").removeClass("active");
             $("#link-landing").addClass("active");
