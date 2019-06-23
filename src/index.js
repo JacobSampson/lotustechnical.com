@@ -5,7 +5,13 @@ $(document).ready(function() {
     let host = document.location.hostname;
     var pageFolder = "pages/";
 
+<<<<<<< HEAD
     if (host !== "lotushealthcaresolutions") {
+=======
+    console.log(host);
+
+    if (host === "lotushealthcaresolutions.com") {
+>>>>>>> 20ccca46e9970257379bee8b4b772f5c2c1fe858
         pageFolder += "health/";
         $("#stock-photo").attr("src", "resources/photos/skyline.jpg");
     } else {

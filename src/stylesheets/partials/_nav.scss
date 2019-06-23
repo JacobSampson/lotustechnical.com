@@ -171,7 +171,6 @@ nav {
     a {
         width: 100%;
 
-        pointer-events: none;
         text-decoration: none;
         color: white;
     }
@@ -185,6 +184,10 @@ nav {
         filter: brightness(150%);
     }
 }
+
+#link-landing, #link-clients, #link-job-seekers {
+    pointer-events: none;
+ }
 
 
 #side-bar {
