@@ -32,7 +32,7 @@ nav {
     }
 }
 
-#logo-technical:hover {
+#logo:hover {
     cursor: pointer;
 }
 
@@ -185,10 +185,12 @@ nav {
     }
 }
 
-#link-landing, #link-clients, #link-job-seekers {
-    pointer-events: none;
- }
+#link-employment-forms {
 
+    a {
+        pointer-events: none;
+    }
+}
 
 #side-bar {
     margin: 0;
