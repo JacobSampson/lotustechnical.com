@@ -196,3 +196,24 @@ nav {
         font-size: 125%;
     }
 }
+
+#side-employment-forms {
+    ul {
+        margin: 0;
+        
+        list-style: none;
+    }
+    a {
+
+        color: white;
+        text-decoration: none;
+        font-size: 150%;
+    }
+    li {
+        margin-top: 4%;
+
+        a:hover {
+            color: #8DD8F8;
+        }
+    }
+}
