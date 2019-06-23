@@ -32,7 +32,7 @@ nav {
     }
 }
 
-#logo-technical:hover {
+#logo:hover {
     cursor: pointer;
 }
 
@@ -184,11 +184,6 @@ nav {
         filter: brightness(150%);
     }
 }
-
-#link-landing, #link-clients, #link-job-seekers {
-    pointer-events: none;
- }
-
 
 #side-bar {
     margin: 0;
