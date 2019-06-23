@@ -500,7 +500,6 @@ nav {
 
 .nav-internal-link a {
   width: 100%;
-  pointer-events: none;
   text-decoration: none;
   color: white;
 }
@@ -514,6 +513,10 @@ nav {
 .nav-internal-link.active {
   -webkit-filter: brightness(150%);
           filter: brightness(150%);
+}
+
+#link-landing, #link-clients, #link-job-seekers {
+  pointer-events: none;
 }
 
 #side-bar {

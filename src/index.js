@@ -5,6 +5,8 @@ $(document).ready(function() {
     let host = document.location.hostname;
     var pageFolder = "pages/";
 
+    console.log(host);
+
     if (host === "lotushealthcaresolutions") {
         pageFolder += "health/";
         $("#stock-photo").attr("src", "resources/photos/skyline.jpg");
