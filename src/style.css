@@ -689,24 +689,11 @@ h1 {
     height: 30%;
     width: 100%;
   }
-  .nav-logo {
-    position: absolute;
-    display: none;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  #side-bar {
     width: 100%;
-    height: 100%;
-    -webkit-box-shadow: 0 0em 2em 1em rgba(0, 0, 0, 0.4);
-            box-shadow: 0 0em 2em 1em rgba(0, 0, 0, 0.4);
   }
-  .nav-logo div {
-    max-width: 15em;
-  }
-  .nav-internal-links, .nav-external-links {
-    top: 135%;
-    width: 100%;
-    height: 10%;
+  .nav-external-links {
+    top: 100%;
   }
   .employee-pictures {
     -webkit-box-orient: vertical;
