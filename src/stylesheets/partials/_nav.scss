@@ -170,6 +170,8 @@ nav {
 
     a {
         width: 100%;
+
+        pointer-events: none;
         text-decoration: none;
         color: white;
     }
