@@ -21,7 +21,7 @@ nav {
     box-shadow: -4em 1em 2em 5em rgba(0,0, 0, 0.4);
 }
 
-.nav-logo {
+#nav-logo {
     position: absolute;
     padding: 20%;
     top: -5%;
@@ -150,7 +150,7 @@ nav {
     align-content: center;
     display: table;
     margin: 0;
-    margin-top: 0.4em;
+    margin-top: 0;
     flex: 1;
     padding: 5%;
 
@@ -170,8 +170,15 @@ nav {
 
     a {
         width: 100%;
+
+        pointer-events: none;
         text-decoration: none;
         color: white;
+    }
+
+    &:hover {    
+        filter: brightness(70%);
+        cursor: pointer;
     }
 
     &.active {
@@ -179,13 +186,6 @@ nav {
     }
 }
 
-.nav-internal-link:hover {
-    width: 103%;
-
-    filter: brightness(70%);
-    cursor: pointer;
-    transform: translateX(-1.5%);
-}
 
 #side-bar {
     margin: 0;
@@ -225,11 +225,24 @@ nav {
     }
 
     p {
-        font-size: 125%;
+        font-size: 150%;
     }
+
+    a {
+        text-decoration: none;
+
+        color: white;
+    }
+
+    a:hover {
+        color: #8DD8F8;
+    }
+
 }
 
 #side-employment-forms {
+    padding-top: 20%;
+
     ul {
         margin: 0;
         
