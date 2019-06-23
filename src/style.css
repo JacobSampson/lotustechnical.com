@@ -692,17 +692,39 @@ h1 {
   main {
     top: 100%;
     width: 100%;
+    overflow: hidden;
   }
-  nav, #side-bar, .nav-bar {
+  nav, .nav-bar {
     position: absolute;
-    height: 30%;
     width: 100%;
   }
   #side-bar {
     width: 100%;
   }
+  .nav-logo {
+    width: 60%;
+    position: absolute;
+  }
+  .nav-logo div {
+    left: 50%;
+    position: relative;
+    max-width: 400;
+  }
+  .nav-logo div div {
+    left: -50%;
+  }
   .nav-external-links {
-    top: 100%;
+    top: -500%;
+  }
+  .nav-internal-links {
+    top: 500%;
+  }
+  .nav-internal-link:hover {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .nav-internal-link:hover p {
+    font-size: 150%;
   }
   .employee-pictures {
     -webkit-box-orient: vertical;

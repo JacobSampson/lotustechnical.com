@@ -1,12 +1,14 @@
 @media only screen and (max-width: 1000px) {
+
     main {
         top: 100%;
         width: 100%;
+
+        overflow: hidden;
     }
 
-    nav, #side-bar, .nav-bar {
+    nav, .nav-bar {
         position: absolute;
-        height: 30%;
         width: 100%;
     }
 
@@ -15,15 +17,35 @@
     }
 
     .nav-logo {
+        width: 60%;
+        position: absolute;
+        
+        div {
+            left: 50%;
+            position: relative;
 
+            max-width: 400;
+
+            div {
+                left: -50%
+            }
+        }
     }
 
     .nav-external-links {
-        top: 100%;
+        top: -500%;
     }
 
     .nav-internal-links {
+        top: 500%;
+    }
 
+    .nav-internal-link:hover {
+        transform: translateX(0);
+
+        p {
+            font-size: 150%;
+        }
     }
 
     .employee-pictures {
