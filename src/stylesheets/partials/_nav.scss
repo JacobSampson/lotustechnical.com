@@ -60,6 +60,10 @@ nav {
     }
 }
 
+.nav-external-links:first-child {
+    background-color: white;
+}
+
 .nav-external-link {
     position: relative;
     margin: 4%;
@@ -84,6 +88,34 @@ nav {
         img {
             top: 0;
             transform: translateY(-15%);
+        }
+    }
+}
+
+#link-info {
+    position: relative;
+    margin: 4%;
+    width: 48%;
+    padding: 0;
+
+    transition: 0.5s;
+
+    a {
+        width: 100%;
+    }
+
+    img {
+        display: relative;
+        transition: 0.5s;
+        width: 100%;
+    }
+
+    &:hover {
+        width: 55%;
+
+        img {
+            top: 0;
+            transform: translateY(-3.5%);
         }
     }
 }
