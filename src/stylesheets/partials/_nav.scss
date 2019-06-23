@@ -225,8 +225,19 @@ nav {
     }
 
     p {
-        font-size: 125%;
+        font-size: 150%;
     }
+
+    a {
+        text-decoration: none;
+
+        color: white;
+    }
+
+    a:hover {
+        color: #8DD8F8;
+    }
+
 }
 
 #side-employment-forms {
