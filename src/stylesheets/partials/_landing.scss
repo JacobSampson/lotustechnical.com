@@ -93,12 +93,13 @@ main {
     flex-direction: row;
 
     background-color: #0069B6;
-
+    
     ul {
         display: table;
 
         li {
             flex: 1;
+            align-self: center;
         }
     }
 }
@@ -108,5 +109,5 @@ main {
     width: 50%;
     float: center;
 
-     margin-left: 15%;
+    margin: 0 1%;
 }
