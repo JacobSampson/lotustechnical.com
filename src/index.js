@@ -9,8 +9,10 @@ $(document).ready(function() {
 
     if (host === "lotushealthcaresolutions.com") {
         pageFolder += "health/";
+        document.title = "Lotus Healthcare Solutions";
     } else {
         pageFolder += "technical/";
+        document.title = "Lotus Technical";
     }
 
     // Set landing as the default home page
