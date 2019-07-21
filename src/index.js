@@ -33,6 +33,10 @@ $(document).ready(function() {
                     $("#side-bar").load(pageFolder + "pieces/side-employment-forms.html");
                     toggleSideBar($("#side-bar"), selectedID);
                     break;
+                case "link-tournament":
+                    $("#side-bar").load(pageFolder + "pieces/side-tournament.html");
+                    toggleSideBar($("#side-bar"), selectedID);
+                    break;
                 default:
                     $("#side-bar").removeClass("active");
             }
