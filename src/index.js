@@ -7,10 +7,12 @@ $(document).ready(function() {
 
     console.log(host);
 
-    if (host !== "lotushealthcaresolutions.com") {
+    if (host === "lotushealthcaresolutions.com") {
         pageFolder += "health/";
+        document.title = "Lotus Healthcare Solutions";
     } else {
         pageFolder += "technical/";
+        document.title = "Lotus Technical";
     }
 
     // Set landing as the default home page
@@ -29,6 +31,10 @@ $(document).ready(function() {
                     break;
                 case "link-employment-forms":
                     $("#side-bar").load(pageFolder + "pieces/side-employment-forms.html");
+                    toggleSideBar($("#side-bar"), selectedID);
+                    break;
+                case "link-tournament":
+                    $("#side-bar").load(pageFolder + "pieces/side-tournament.html");
                     toggleSideBar($("#side-bar"), selectedID);
                     break;
                 default:
