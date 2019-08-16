@@ -143,7 +143,7 @@ function loadOpenings(url) {
 function setOpenings() {
     try {
         return window.openingData.map(opening => {
-
+ 
             console.log(opening.id);
             return `
             <div class="openings__opening">
