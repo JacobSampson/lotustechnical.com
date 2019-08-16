@@ -518,7 +518,8 @@ nav {
           filter: brightness(150%);
 }
 
-#link-employment-forms a {
+#link-employment-forms a,
+#link-tournament a {
   pointer-events: none;
 }
 
@@ -582,26 +583,31 @@ nav {
   color: #8DD8F8;
 }
 
-#side-employment-forms {
+#side-employment-forms,
+#side-tournament {
   padding-top: 20%;
 }
 
-#side-employment-forms ul {
+#side-employment-forms ul,
+#side-tournament ul {
   margin: 0;
   list-style: none;
 }
 
-#side-employment-forms a {
+#side-employment-forms a,
+#side-tournament a {
   color: white;
   text-decoration: none;
   font-size: 150%;
 }
 
-#side-employment-forms li {
+#side-employment-forms li,
+#side-tournament li {
   margin-top: 4%;
 }
 
-#side-employment-forms li a:hover {
+#side-employment-forms li a:hover,
+#side-tournament li a:hover {
   color: #8DD8F8;
 }
 
@@ -920,8 +926,8 @@ h1 {
             transform: translateX(0);
   }
   #side-bar.active {
-    -webkit-transform: translate(0%, 100%);
-            transform: translate(0%, 100%);
+    -webkit-transform: translate(0%, 110%);
+            transform: translate(0%, 110%);
   }
 }
 /*# sourceMappingURL=style.css.map */
