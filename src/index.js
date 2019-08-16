@@ -4,16 +4,16 @@ $(document).ready(function() {
     let host = document.location.hostname;
     var pageFolder = "pages/";
     
-    loadOpenings();
-
     console.log(host);
-
+    
     if (host === "lotushealthcaresolutions.com") {
         pageFolder += "health/";
         document.title = "Lotus Healthcare Solutions";
+        loadOpenings('https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml');
     } else {
         pageFolder += "technical/";
         document.title = "Lotus Technical";
+        loadOpenings('https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml');
     }
 
     // Set landing as the default home page
@@ -131,8 +131,8 @@ function toggleActivePopup(e) {
     }
 }
 
-function loadOpenings() {
-    Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml',
+function loadOpenings(url) {
+    Tabletop.init( { key: url,
         callback: function(data, tabletop) { 
             window.openingData = data;
         },
