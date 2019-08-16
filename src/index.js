@@ -67,6 +67,22 @@ $(document).ready(function() {
                 $(".info-bubble").click(function() {
                     toggleActivePopup($(this));
                 });
+
+                // Current openings link
+                $("#openings-button-link").click(function() {
+                    $("main").load(pageFolder + "/openings.html", function() {
+                        $("li.active").removeClass("active");
+                        $("#link-openings").addClass("active");
+                    });
+
+                });
+            });
+        });
+        $("#link-openings").click(function() {
+            $("main").load(pageFolder + "/openings.html", function() {
+                $(".info-bubble").click(function() {
+                    toggleActivePopup($(this));
+                });
             });
         });
     });
@@ -101,3 +117,11 @@ function toggleActivePopup(e) {
         e.next().addClass("active");
     }
 }
+
+function init() {
+    Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y',
+                     callback: function(data, tabletop) { 
+                         console.log(data)
+                     },
+                     simpleSheet: true } )
+  }
