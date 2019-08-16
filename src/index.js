@@ -4,7 +4,6 @@ $(document).ready(function() {
     let host = document.location.hostname;
     var pageFolder = "pages/";
     
-    let openingsData;
     loadOpenings();
 
     console.log(host);
@@ -82,9 +81,10 @@ $(document).ready(function() {
                         $("li.active").removeClass("active");
                         $("#link-openings").addClass("active");
 
-                        $("#openings").load(setOpenings(openingsData));
+                        let openingsInfo = setOpenings();
+                        document.querySelector(".openings").innerHTML = openingsInfo;
                     });
-
+                    
                 });
             });
         });
@@ -93,6 +93,9 @@ $(document).ready(function() {
                 $(".info-bubble").click(function() {
                     toggleActivePopup($(this));
                 });
+                
+                let openingsInfo = setOpenings();
+                document.querySelector(".openings").innerHTML = openingsInfo;
             });
         });
     });
@@ -131,16 +134,15 @@ function toggleActivePopup(e) {
 function loadOpenings() {
     Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml',
         callback: function(data, tabletop) { 
-            console.log(data);
-            openingsData = data;
+            window.openingData = data;
         },
         simpleSheet: true
     });
 } 
 
-function setOpenings(data) {
+function setOpenings() {
     try {
-        return data.map(opening => {
+        return window.openingData.map(opening => {
 
             console.log(opening.id);
             return `
