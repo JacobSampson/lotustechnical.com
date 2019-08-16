@@ -1,9 +1,11 @@
 var oldSelection = null;
-
 $(document).ready(function() {
     // Switch pages loaded for the two domains
     let host = document.location.hostname;
     var pageFolder = "pages/";
+    
+    let openingsData;
+    loadOpenings();
 
     console.log(host);
 
@@ -79,6 +81,8 @@ $(document).ready(function() {
                     $("main").load(pageFolder + "/openings.html", function() {
                         $("li.active").removeClass("active");
                         $("#link-openings").addClass("active");
+
+                        $("#openings").load(setOpenings(openingsData));
                     });
 
                 });
@@ -124,10 +128,33 @@ function toggleActivePopup(e) {
     }
 }
 
-function init() {
-    Tabletop.init( { key: 'https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y',
-                     callback: function(data, tabletop) { 
-                         console.log(data)
-                     },
-                     simpleSheet: true } )
-  }
+function loadOpenings() {
+    Tabletop.init( { key:'https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml',
+        callback: function(data, tabletop) { 
+            console.log(data);
+            openingsData = data;
+        },
+        simpleSheet: true
+    });
+} 
+
+function setOpenings(data) {
+    try {
+        return data.map(opening => {
+
+            console.log(opening.id);
+            return `
+            <div class="openings__opening">
+                <h2 class="openings__header">${opening.title}</h2>
+                <p class="openings__description">${opening.description}</p>
+                <p class="openings__location">${opening.location}</p>
+                <p class="openings__employee-type">${opening.employee_type}</p>
+                <p class="openings__id">${opening.id}</p>
+                <p class="openings__pay">${opening.pay}</p>
+            </div>
+            `
+        }).join("");
+    } catch {
+        return `<h1>NO OPENINGS</h1>`;
+    }
+}
