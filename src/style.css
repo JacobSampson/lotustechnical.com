@@ -955,7 +955,7 @@ h1 {
 }
 
 .openings__opening {
-  width: 80%;
+  width: 100%;
   text-align: left;
   padding: 2em;
   position: relative;
@@ -965,7 +965,7 @@ h1 {
   content: '';
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 80%;
   height: 6px;
   z-index: 15;
   background: -webkit-gradient(linear, right top, left top, from(#61c69d), to(#2d72bc));
@@ -997,5 +997,14 @@ h1 {
 
 .openings__link:hover {
   color: #aadaa0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .openings__link {
+    right: 5em;
+  }
+  .openings__opening {
+    width: 80%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
