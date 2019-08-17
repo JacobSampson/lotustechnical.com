@@ -6,7 +6,7 @@ $(document).ready(function() {
     
     console.log(host);
     
-    if (host === "lotushealthcaresolutions.com") {
+    if (host !== "lotushealthcaresolutions.com") {
         pageFolder += "health/";
         document.title = "Lotus Healthcare Solutions";
         loadOpenings('https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml');
@@ -144,15 +144,13 @@ function setOpenings() {
     try {
         return window.openingData.map(opening => {
  
-            console.log(opening.id);
             return `
             <div class="openings__opening">
                 <h2 class="openings__header">${opening.title}</h2>
-                <p class="openings__description">${opening.description}</p>
+                <p class="openings__pay">$${opening.pay}</p>
                 <p class="openings__location">${opening.location}</p>
-                <p class="openings__employee-type">${opening.employee_type}</p>
-                <p class="openings__id">${opening.id}</p>
-                <p class="openings__pay">${opening.pay}</p>
+                <p class="openings__description">${opening.description}</p>
+                <a class="openings__link" href="mailto:brousslang@lotustechnical.com?subject=Application: ${opening.title}">Apply</a>
             </div>
             `
         }).join("");
