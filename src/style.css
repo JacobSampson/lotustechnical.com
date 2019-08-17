@@ -641,6 +641,7 @@ h1 {
           flex-direction: column;
   padding-top: 5em;
   padding-bottom: 10em;
+  padding-left: 0;
   background-color: #0069B6;
 }
 
@@ -944,9 +945,9 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: white;
 }
 
