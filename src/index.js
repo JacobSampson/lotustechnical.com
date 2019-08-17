@@ -6,7 +6,7 @@ $(document).ready(function() {
     
     console.log(host);
     
-    if (host !== "lotushealthcaresolutions.com") {
+    if (host === "lotushealthcaresolutions.com") {
         pageFolder += "health/";
         document.title = "Lotus Healthcare Solutions";
         loadOpenings('https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml');
