@@ -20,8 +20,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 10%;
-  margin-top: 3%;
+  margin: 3% 20% 0 20%;
 }
 
 .employee {
@@ -760,6 +759,10 @@ h1 {
   padding-bottom: 30%;
 }
 
+.client-employee-pictures {
+  margin: 3% 20% 0 20%;
+}
+
 .client-employee .info-bubble {
   position: absolute;
   -webkit-filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);
@@ -794,29 +797,29 @@ h1 {
   cursor: pointer;
 }
 
-.client-employee .info-bubble .bubble-image {
+.client-employee .bubble-image {
   position: relative;
   right: -50%;
 }
 
-.client-employee .info-bubble.active {
+.client-employee.active {
   -webkit-animation: none;
           animation: none;
   width: 15%;
   top: -2.5%;
 }
 
-.client-employee .info-bubble.active .bubble-image {
+.client-employee.active .bubble-image {
   position: relative;
   right: -50%;
 }
 
-.client-employee .info-bubble.active .bubble-image img {
+.client-employee.active .bubble-image img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.client-employee .info-box {
+.info-box {
   display: block;
   position: absolute;
   width: 100%;
@@ -829,7 +832,7 @@ h1 {
   opacity: 0;
 }
 
-.client-employee .info-box .info-text {
+.info-box .info-text {
   display: absolute;
   padding-left: 1.25em;
   width: 100%;
@@ -839,23 +842,23 @@ h1 {
   opacity: 0%;
 }
 
-.client-employee .info-box .info-text p {
+.info-box .info-text p {
   text-align: left;
   line-height: 1.5em;
   display: absolute;
   font-size: 1.2em;
 }
 
-.client-employee .info-box .info-text a {
+.info-box .info-text a {
   color: white;
   text-decoration: none;
 }
 
-.client-employee .info-box .info-text a:hover {
+.info-box .info-text a:hover {
   color: #8DD8F8;
 }
 
-.client-employee .info-box.active {
+.info-box.active {
   opacity: 1;
 }
 
