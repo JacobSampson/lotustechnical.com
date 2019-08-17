@@ -13,7 +13,7 @@
     h2 {
         font-size: 300%;
         text-align: center;
-    }
+    }   
     
     p {
         font-size: 200%;
@@ -40,7 +40,6 @@
         right: 50%;
         top: 58%;
         z-index: $idx-nav;
-   }
     
     .bubble-image {
         position: relative;
@@ -101,4 +100,5 @@
 }
 .info-box.active {
     opacity: 1;
+}
 }

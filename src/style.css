@@ -794,29 +794,29 @@ h1 {
   cursor: pointer;
 }
 
-.client-employee .bubble-image {
+.client-employee .info-bubble .bubble-image {
   position: relative;
   right: -50%;
 }
 
-.client-employee.active {
+.client-employee .info-bubble.active {
   -webkit-animation: none;
           animation: none;
   width: 15%;
   top: -2.5%;
 }
 
-.client-employee.active .bubble-image {
+.client-employee .info-bubble.active .bubble-image {
   position: relative;
   right: -50%;
 }
 
-.client-employee.active .bubble-image img {
+.client-employee .info-bubble.active .bubble-image img {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.info-box {
+.client-employee .info-box {
   display: block;
   position: absolute;
   width: 100%;
@@ -829,7 +829,7 @@ h1 {
   opacity: 0;
 }
 
-.info-box .info-text {
+.client-employee .info-box .info-text {
   display: absolute;
   padding-left: 1.25em;
   width: 100%;
@@ -839,23 +839,23 @@ h1 {
   opacity: 0%;
 }
 
-.info-box .info-text p {
+.client-employee .info-box .info-text p {
   text-align: left;
   line-height: 1.5em;
   display: absolute;
   font-size: 1.2em;
 }
 
-.info-box .info-text a {
+.client-employee .info-box .info-text a {
   color: white;
   text-decoration: none;
 }
 
-.info-box .info-text a:hover {
+.client-employee .info-box .info-text a:hover {
   color: #8DD8F8;
 }
 
-.info-box.active {
+.client-employee .info-box.active {
   opacity: 1;
 }
 
