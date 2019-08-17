@@ -956,6 +956,10 @@ h1 {
 }
 
 .openings__opening:not(:last-child) {
-  border-bottom: solid palevioletred 5px;
+  border-bottom: solid #4A9B39 5px;
+}
+
+.openings__header {
+  color: #001e32;
 }
 /*# sourceMappingURL=style.css.map */
