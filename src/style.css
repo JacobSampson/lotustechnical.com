@@ -735,9 +735,6 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 5em;
-  padding-bottom: 0em;
-  background-color: #00A5E4;
   padding-top: 5%;
   padding-bottom: 4em;
   background-color: #00A5E4;

@@ -5,11 +5,6 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding-top: 5em;
-    padding-bottom: 0em;
-
-    background-color:#00A5E4;
-
     padding-top: 5%;
     padding-bottom: 4em;
 
@@ -38,12 +33,13 @@
 }
 
 .client-employee {
+
    .info-bubble {
-    @include hover-bubble(invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%), invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%));
-    width: 25%;
-    right: 50%;
-    top: 58%;
-    z-index: $idx-nav;
+        @include hover-bubble(invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%), invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%));
+        width: 25%;
+        right: 50%;
+        top: 58%;
+        z-index: $idx-nav;
    }
     
     .bubble-image {
