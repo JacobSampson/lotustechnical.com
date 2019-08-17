@@ -1,0 +1,44 @@
+.openings {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+ 
+    
+    background-color: white;
+
+    &__opening {
+        width: 80%;
+        text-align: center;
+
+        &:not(:last-child) {
+            border-bottom: solid #4A9B39 5px;
+        }
+
+    }
+
+    &__header {
+        color:  rgb(0, 30, 50);
+
+    }
+
+    &__description {
+
+    }
+
+    &__location {
+
+    }
+
+    &__employee-type {
+
+    }
+
+    &__id {
+
+    }
+
+    &__pay {
+
+    }
+}
