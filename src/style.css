@@ -641,6 +641,7 @@ h1 {
           flex-direction: column;
   padding-top: 5em;
   padding-bottom: 10em;
+  padding-left: 0;
   background-color: #0069B6;
 }
 
@@ -944,22 +945,57 @@ h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5em;
+  padding-bottom: 5em;
+  font-size: 1.3em;
   background-color: white;
 }
 
 .openings__opening {
   width: 80%;
-  text-align: center;
+  text-align: left;
+  padding: 2em;
+  position: relative;
 }
 
-.openings__opening:not(:last-child) {
-  border-bottom: solid #4A9B39 5px;
+.openings__opening:not(:last-child):before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  z-index: 15;
+  background: -webkit-gradient(linear, right top, left top, from(#61c69d), to(#2d72bc));
+  background: linear-gradient(to left, #61c69d 0%, #2d72bc 100%);
 }
 
 .openings__header {
   color: #001e32;
+}
+
+.openings__location {
+  color: gray;
+}
+
+.openings__pay {
+  color: gray;
+}
+
+.openings__link {
+  text-decoration: none;
+  color: #4A9B39;
+  font-weight: bold;
+  padding: .5em;
+  border: solid #4A9B39 3px;
+  position: absolute;
+  right: -2em;
+  top: 3.5em;
+}
+
+.openings__link:hover {
+  color: #aadaa0;
 }
 /*# sourceMappingURL=style.css.map */
