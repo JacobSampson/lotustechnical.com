@@ -155,6 +155,6 @@ function setOpenings() {
             `
         }).join("");
     } catch {
-        return `<h1>NO OPENINGS</h1>`;
+        return `<h1></h1>`;
     }
 }
