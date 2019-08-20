@@ -147,7 +147,7 @@ function setOpenings() {
             return `
             <div class="openings__opening">
                 <h2 class="openings__header">${opening.title}</h2>
-                <p class="openings__pay">$${opening.pay}</p>
+                <p class="openings__pay${opening.pay ? '' : ' openings__pay--unused'}">$${opening.pay}</p>
                 <p class="openings__location">${opening.location}</p>
                 <p class="openings__description">${opening.description}</p>
                 <a class="openings__link" href="mailto:brousslang@lotustechnical.com?subject=Application: ${opening.title}">Apply</a>

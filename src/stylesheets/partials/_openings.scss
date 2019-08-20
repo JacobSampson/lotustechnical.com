@@ -10,7 +10,7 @@
     background-color: white;
 
     &__opening {
-        width: 100%;
+        width: 80%;
         text-align: left;
         padding: 2em;
         position: relative;
@@ -45,6 +45,10 @@
 
     &__pay {
         color: gray;
+
+        &--unused {
+            display: none;
+        }
     }
 
     &__link {
@@ -55,10 +59,7 @@
         padding: .5em;
         border: solid #4A9B39 3px;
         //border-radius: 2em;
-
-        position: absolute;
-        right: -2em;
-        top: 3.5em;
+        line-height: 300%;
 
         &:hover {
             color: rgb(170, 218, 160);
