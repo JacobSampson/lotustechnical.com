@@ -6,10 +6,10 @@ $(document).ready(function() {
     
     console.log(host);
     
-    if (host === "lotushealthcaresolutions.com") {
+    if (host !== "lotushealthcaresolutions.com") {
         pageFolder += "health/";
         document.title = "Lotus Healthcare Solutions";
-        loadOpenings('https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml');
+        loadOpenings('https://docs.google.com/spreadsheets/d/1GOMikRxrXu24H1Kc3lSG8MTPNIbj8ZQ6zR5SoJ43mqM/pubhtml');
     } else {
         pageFolder += "technical/";
         document.title = "Lotus Technical";
