@@ -29,7 +29,7 @@
 }
 
 .client-employee-pictures {
-    margin: 3% 20% 0 20%;
+    // margin: 3% 20% 0 20%;
 }
 
 
@@ -39,7 +39,7 @@
         @include hover-bubble(invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%), invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%));
         width: 25%;
         right: 50%;
-        top: 58%;
+        top: 50%;
         z-index: $idx-nav;
     
     .bubble-image {
@@ -68,8 +68,8 @@
     display: block;
     position: absolute;
     width: 100%;
-    bottom: 20%;
-    height: 80%;
+    bottom: 0%;
+    height: 100%;
 
     background-image: linear-gradient(0deg, rgba(74, 156, 57, 1) 10%, 80%,  rgba(74, 156, 57, 0) 90%);
     transition: all 0.25s linear;
@@ -82,13 +82,11 @@
         height: 30%;
         transform: translateY(200%);
 
-        opacity: 0%;
-
         p {
             text-align: left;
             line-height: 1.5em;
             display: absolute;
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         a {
@@ -103,4 +101,8 @@
 .info-box.active {
     opacity: 1;
 }
+}
+
+.contact-info {
+    height: 10em;
 }

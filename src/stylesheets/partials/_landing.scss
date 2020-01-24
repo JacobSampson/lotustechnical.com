@@ -91,11 +91,15 @@ main {
 #industries {
     display: flex;
     flex-direction: row;
+    text-align: center;
 
     background-color: #0069B6;
     
     ul {
-        display: table;
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        list-style: none;
 
         li {
             flex: 1;
