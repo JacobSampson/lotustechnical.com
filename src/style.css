@@ -783,6 +783,20 @@ h1 {
   margin: 3% 20% 0 20%;
 }
 
+.employee-pictures--technical {
+  margin: 3% 10% 0 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: space-around;
+      -ms-flex-align: space-around;
+          align-items: space-around;
+}
+
 .client-employee .info-bubble {
   position: absolute;
   -webkit-filter: invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%);
@@ -882,6 +896,14 @@ h1 {
   color: #8DD8F8;
 }
 
+.client-employee .info-box--kyle {
+  top: 24%;
+}
+
+.client-employee .info-box--garrett {
+  top: 31%;
+}
+
 .client-employee .info-box.active {
   opacity: 1;
   opacity: 0.99;
@@ -905,6 +927,14 @@ h1 {
 .client-employee .info-box {
   top: 15%;
   height: 60%;
+}
+
+.info-box--kyle {
+  top: 24% !important;
+}
+
+.info-box--garrett {
+  top: 31% !important;
 }
 
 @media only screen and (max-width: 1200px) {
