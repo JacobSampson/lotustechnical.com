@@ -118,4 +118,15 @@
     .info-text p {
         font-size: 1.5em !important;
     }
+
+    .info-box {
+        &--kyle {
+            top: 24% !important;
+        }
+    
+        &--garrett {
+            top: 31% !important;
+        }
+    }
+    
 }
