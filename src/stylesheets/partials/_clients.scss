@@ -29,7 +29,7 @@
 }
 
 .client-employee-pictures {
-    margin: 3% 20% 0 20%;
+    // margin: 3% 20% 0 20%;
 }
 
 .employee-pictures {
@@ -48,7 +48,7 @@
         @include hover-bubble(invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%), invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%));
         width: 25%;
         right: 50%;
-        top: 58%;
+        top: 50%;
         z-index: $idx-nav;
     
     
@@ -102,7 +102,7 @@
             text-align: left;
             line-height: 1.5em;
             display: absolute;
-            font-size: 1.2em;
+            font-size: 1em;
         }
 
         a {
@@ -146,4 +146,8 @@
 .client-employee .info-box {
     top: 15%;
     height: 60%;
+}
+
+.contact-info {
+    height: 10em;
 }

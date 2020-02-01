@@ -1,7 +1,8 @@
 .employee-pictures {
     display: flex;
     flex-direction: row;
-    margin: 3% 20% 0 20%;
+    align-items: center;
+    margin: 0 4em;
 }
 
 .employee {
@@ -28,7 +29,7 @@
     @include hover-bubble(invert(49%) sepia(47%) saturate(581%) hue-rotate(64deg) brightness(96%) contrast(93%), invert(33%) sepia(44%) saturate(699%) hue-rotate(63deg) brightness(95%) contrast(85%));
     width: 25%;
     right: 50%;
-    top: 66%;
+    top: 60%;
     z-index: $idx-nav;
     
     .bubble-image {

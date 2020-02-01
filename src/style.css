@@ -20,7 +20,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 3% 20% 0 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 4em;
 }
 
 .employee {
@@ -64,7 +67,7 @@ body {
           animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   width: 25%;
   right: 50%;
-  top: 66%;
+  top: 60%;
   z-index: 10;
 }
 
@@ -340,6 +343,16 @@ nav {
   height: 100%;
   width: 20%;
   z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(15%, #9fb8ad), color-stop(51%, #001e32), color-stop(75%, #001e32));
   background-image: linear-gradient(180deg, #9fb8ad 15%, #001e32 51%, #001e32 75%);
   -webkit-box-shadow: -4em 1em 2em 5em rgba(0, 0, 0, 0.4);
@@ -347,9 +360,7 @@ nav {
 }
 
 #nav-logo {
-  position: absolute;
-  padding: 20%;
-  top: -5%;
+  padding: 10%;
 }
 
 #nav-logo img {
@@ -357,15 +368,25 @@ nav {
   width: 100%;
 }
 
+.nav-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
 #logo:hover {
   cursor: pointer;
 }
 
 .nav-external-links {
-  position: absolute;
   width: 100%;
-  height: 20%;
-  top: 30%;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -464,14 +485,10 @@ nav {
 }
 
 .nav-internal-links {
-  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  right: 0;
-  bottom: 5%;
   width: 100%;
-  height: 45%;
   text-align: center;
 }
 
@@ -779,10 +796,6 @@ h1 {
   padding-bottom: 30%;
 }
 
-.client-employee-pictures {
-  margin: 3% 20% 0 20%;
-}
-
 .employee-pictures--technical {
   margin: 3% 10% 0 10%;
   display: -webkit-box;
@@ -821,7 +834,7 @@ h1 {
           animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   width: 25%;
   right: 50%;
-  top: 58%;
+  top: 50%;
   z-index: 10;
 }
 
@@ -884,7 +897,7 @@ h1 {
   text-align: left;
   line-height: 1.5em;
   display: absolute;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .client-employee .info-box .info-text a {
@@ -929,11 +942,21 @@ h1 {
   height: 60%;
 }
 
+.contact-info {
+  height: 10em;
+}
+
 @media only screen and (max-width: 1200px) {
   .info-text p {
     font-size: 0.90em !important;
   }
   .nav-internal-link {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .info-text {
     font-size: 1em;
   }
 }
@@ -999,6 +1022,9 @@ h1 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .employee-pictures .employee {
     margin: 2%;
