@@ -6,7 +6,7 @@ $(document).ready(function() {
     
     console.log(host);
     
-    if (host === "lotushealthcaresolutions.com") {
+    if (host !== "lotushealthcaresolutions.com") {
         
         pageFolder += "health/";
         document.title = "Lotus Healthcare Solutions";
