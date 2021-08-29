@@ -10,7 +10,7 @@ $(document).ready(function() {
     let requestURL = 'https://sheets.googleapis.com/v4/spreadsheets/';
     if (host === "lotushealthcaresolutions.com") {
         // Create request
-        requestURL += '1GOMikRxrXu24H1Kc3lSG8MTPNIbj8ZQ6zR5SoJ43mqM-x6v6WG8Y/';
+        requestURL += '1GOMikRxrXu24H1Kc3lSG8MTPNIbj8ZQ6zR5SoJ43mqM/';
         requestURL += 'values/Sheet1!A1:D100';
         requestURL += `?key=${API_KEY}`;
 
