@@ -1,20 +1,32 @@
 var oldSelection = null;
+const API_KEY = 'AIzaSyA1tWGe-150v7gdQXmtOjcZbGGguN1J7Lw';
 $(document).ready(function() {
     // Switch pages loaded for the two domains
     let host = document.location.hostname;
     var pageFolder = "pages/";
     
     console.log(host);
-    
+
+    let requestURL = 'https://sheets.googleapis.com/v4/spreadsheets/';
     if (host === "lotushealthcaresolutions.com") {
-        
+        // Create request
+        requestURL += '1GOMikRxrXu24H1Kc3lSG8MTPNIbj8ZQ6zR5SoJ43mqM-x6v6WG8Y/';
+        requestURL += 'values/Sheet1!A1:D100';
+        requestURL += `?key=${API_KEY}`;
+
         pageFolder += "health/";
         document.title = "Lotus Healthcare Solutions";
-        loadOpenings('https://docs.google.com/spreadsheets/d/1GOMikRxrXu24H1Kc3lSG8MTPNIbj8ZQ6zR5SoJ43mqM/pubhtml');
+        loadOpenings(requestURL);
+
     } else {
+        // Create request
+        requestURL += '1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/';
+        requestURL += 'values/Sheet1!A1:D100';
+        requestURL += `?key=${API_KEY}`;
+
         pageFolder += "technical/";
         document.title = "Lotus Technical";
-        loadOpenings('https://docs.google.com/spreadsheets/d/1rshSdUdYiL6T4mqNBXfIjSlofDjpnt1eu0-x6v6WG8Y/pubhtml');
+        loadOpenings(requestURL);
     }
 
     // Set landing as the default home page
@@ -132,13 +144,25 @@ function toggleActivePopup(e) {
     }
 }
 
-function loadOpenings(url) {
-    Tabletop.init( { key: url,
-        callback: function(data, tabletop) { 
-            window.openingData = data;
-        },
-        simpleSheet: true
-    });
+async function loadOpenings(url) {
+    try {
+        const sheet = await fetch(url);
+        const sheetJSON = await sheet.json();
+        const openingData = sheetJSON.values.slice(1).map(value => {
+            const [title, location, pay, description] = value;
+             return {
+                 title,
+                 pay,
+                 location,
+                 description 
+             }
+        });
+        console.log(openingData)
+        window.openingData = openingData;
+    } catch (e) {
+        console.log('[error] ' + e)
+        window.openingData = [];
+    }
 } 
 
 function setOpenings() {
