@@ -5,3 +5,17 @@
 ---
 
 <a href="https://www.lotustechnical.com">Lotus Technical</a>
+
+
+---
+
+
+TODO:
+change submit a resume to look like a button
+add to the footer
+different modes
+template cleanup
+birds flying in
+animation on footer when first brought there
+change logo to remove words
+add color palette
