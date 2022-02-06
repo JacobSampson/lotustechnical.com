@@ -2,6 +2,9 @@ import Head from "next/head";
 import styled from "styled-components";
 import EmployeeCard from "../../components/EmployeeCard";
 import { Layout } from "../../layouts/Layout";
+import PrismicService from "../../lib/client/services/prismic";
+import EmployeeModel from "../../lib/core/model/employee";
+import CardModel from "../../lib/core/model/card";
 
 const Container = styled.section`
   display: flex;
@@ -84,41 +87,58 @@ const StyledLink = styled.a`
   }
 `;
 
-export default function JobSeekers() {
+const JobSeekers = ({ title, about, employees, data }) => {
   return (
     <Layout>
       <Container>
         <Card>
-          <Title>Meet Your Employment Experts</Title>
+          {title && <Title>{title}</Title>}
           <EmployeeCards>
-            <EmployeeCard
-              name="Sydney Hines"
-              cellPhoneNumber="763-313-6394"
-              officePhoneNumber="763-307-6505"
-              email="shines@lotustechnical.com"
-              linkedInUrl="https://www.linkedin.com/in/sydney-hines-564b87a7/"
-              imageUrl="/images/staff-sydney.jpg"
-              title="Recruiter"
-            />
+            {employees.map((employee, index) => (
+              <EmployeeCard key={index} {...employee} />
+            ))}
           </EmployeeCards>
         </Card>
         <Card style={{ backgroundColor: "#0069B6" }}>
-          <Title>Placement Options</Title>
-          <ul>
-            <li>Contract</li>
-            <li>Vendor Management System (VMS)</li>
-            <li>Contract to Hire</li>
-            <li>Direct Placement</li>
-            <li>Recruiting Managed Services</li>
-          </ul>
+          {about?.length &&
+            about.map(({ title, listItems }, index) => (
+              <>
+                <Title key={`title-${index}`}>{title}</Title>
+                <ul key={`list-${index}`}>
+                  {listItems.map((item, itemIndex) => (
+                    <li key={itemIndex}>{item}</li>
+                  ))}
+                </ul>
+              </>
+            ))}
         </Card>
-        {/* <RowCard>
-          <StyledLink href="mailto:brousslang@lotustechnical.com">
-            Submit a Resumé
-          </StyledLink>
-          <StyledLink>Current Openings</StyledLink>
-        </RowCard> */}
       </Container>
     </Layout>
   );
+};
+
+export async function getStaticProps() {
+  const { data } = await PrismicService.getSingle("job-seekers-page");
+
+  const employees = (data as any)?.body?.length
+    ? (data.body as any[])
+        .find(({ slice_type }) => slice_type === "employees")
+        .items.map(EmployeeModel.fromPrismic)
+    : [];
+
+  const title = (data as any)?.title?.length ? data.title[0].text : undefined;
+  const about = (data as any)?.about?.length
+    ? CardModel.fromPrismicGroup(data.about)
+    : [];
+
+  return {
+    props: {
+      title,
+      about,
+      employees,
+      data,
+    },
+  };
 }
+
+export default JobSeekers;
