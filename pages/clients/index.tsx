@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import EmployeeCard from "../../components/EmployeeCard";
-import { Layout } from "../../layouts/Layout";
-import useClients from "../../lib/client/hooks/useClients";
+import styled from 'styled-components';
+import ShowMoreCard from '../../components/ShowMoreCard';
+import { Layout } from '../../layouts/Layout';
+import useClients from '../../lib/client/hooks/useClients';
 
 const Container = styled.section`
   display: flex;
@@ -31,7 +31,7 @@ const Card = styled.section`
   }
 `;
 
-const EmployeeCards = styled.div`
+const ShowMoreCards = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -46,19 +46,15 @@ const Clients = () => {
       <Container>
         <Card>
           {title && <Title>{title}</Title>}
-          <EmployeeCards>
+          <ShowMoreCards>
             {employees.map((employee, index) => (
-              <EmployeeCard key={index} {...employee} />
+              <ShowMoreCard key={index} {...employee} />
             ))}
-          </EmployeeCards>
+          </ShowMoreCards>
         </Card>
-        <Card style={{ backgroundColor: "#00a5e4" }}>
+        <Card style={{ backgroundColor: '#00a5e4' }}>
           {about.map(({ type, text }, index) =>
-            type === "paragraph" ? (
-              <p key={index}>{text}</p>
-            ) : (
-              <Title key={index}>{text}</Title>
-            )
+            type === 'paragraph' ? <p key={index}>{text}</p> : <Title key={index}>{text}</Title>
           )}
         </Card>
       </Container>

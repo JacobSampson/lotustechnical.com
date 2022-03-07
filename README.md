@@ -19,3 +19,15 @@ birds flying in
 animation on footer when first brought there
 change logo to remove words
 add color palette
+
+## Getting Started
+
+```
+npm install
+npm install next react react-dom
+```
+
+```
+npx sb init
+npm run storybook
+```

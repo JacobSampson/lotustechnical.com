@@ -1,10 +1,10 @@
-import Head from "next/head";
-import styled from "styled-components";
-import EmployeeCard from "../../components/EmployeeCard";
-import { Layout } from "../../layouts/Layout";
-import PrismicService from "../../lib/client/services/prismic";
-import EmployeeModel from "../../lib/core/model/employee";
-import CardModel from "../../lib/core/model/card";
+import Head from 'next/head';
+import styled from 'styled-components';
+import ShowMoreCard from '../../components/ShowMoreCard';
+import { Layout } from '../../layouts/Layout';
+import PrismicService from '../../lib/client/services/prismic';
+import EmployeeModel from '../../lib/core/model/employee';
+import CardModel from '../../lib/core/model/card';
 
 const Container = styled.section`
   display: flex;
@@ -52,7 +52,7 @@ const Card = styled.section`
   }
 `;
 
-const EmployeeCards = styled.div`
+const ShowMoreCards = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -93,13 +93,13 @@ const JobSeekers = ({ title, about, employees, data }) => {
       <Container>
         <Card>
           {title && <Title>{title}</Title>}
-          <EmployeeCards>
+          <ShowMoreCards>
             {employees.map((employee, index) => (
-              <EmployeeCard key={index} {...employee} />
+              <ShowMoreCard key={index} {...employee} />
             ))}
-          </EmployeeCards>
+          </ShowMoreCards>
         </Card>
-        <Card style={{ backgroundColor: "#0069B6" }}>
+        <Card style={{ backgroundColor: '#0069B6' }}>
           {about?.length &&
             about.map(({ title, listItems }, index) => (
               <>
@@ -118,18 +118,16 @@ const JobSeekers = ({ title, about, employees, data }) => {
 };
 
 export async function getStaticProps() {
-  const { data } = await PrismicService.getSingle("job-seekers-page");
+  const { data } = await PrismicService.getSingle('job-seekers-page');
 
   const employees = (data as any)?.body?.length
     ? (data.body as any[])
-        .find(({ slice_type }) => slice_type === "employees")
+        .find(({ slice_type }) => slice_type === 'employees')
         .items.map(EmployeeModel.fromPrismic)
     : [];
 
   const title = (data as any)?.title?.length ? data.title[0].text : undefined;
-  const about = (data as any)?.about?.length
-    ? CardModel.fromPrismicGroup(data.about)
-    : [];
+  const about = (data as any)?.about?.length ? CardModel.fromPrismicGroup(data.about) : [];
 
   return {
     props: {

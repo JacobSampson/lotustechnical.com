@@ -1,2 +1,2 @@
-export * from "./viewReducer";
-export * from "./rootReducer";
+export * from './viewReducer';
+export * from './rootReducer';
