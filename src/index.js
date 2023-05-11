@@ -179,6 +179,9 @@ function setOpenings() {
   try {
     return window.openingData
       .map((opening) => {
+        if (!opening.title || !opening.location || !opening.description)
+          return "";
+
         let description = opening.description.replace(
           /(?:\r\n|\r|\n)/g,
           "<br>"
